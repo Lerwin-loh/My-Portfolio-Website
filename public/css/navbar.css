@@ -1,0 +1,52 @@
+
+.navbar{
+    background-color: #dddddd00;
+}
+
+.nav-link{
+    font-weight: 600;
+    color:#ddd;
+    letter-spacing: 1px;
+}
+
+.shrink{
+    transition: 1s;     
+    font-size: 13px;
+}   
+.unShrink{
+    transition: 1s;     
+    font-size: 16px;
+}
+
+.shrink-nav {
+    transition: 1s;
+    padding:4px 0 4px 0;
+}
+.unShrink-nav {
+    transition: 1s;
+    padding:8px 0 8px 0;
+}
+
+.BtnsSocialMedia {
+    height: 30px;
+}
+
+.BtnsSocialMedia:hover {
+    transition: .5s;
+    transform: scale(0.9);
+}
+
+.Logo {
+    height: 45px;
+}
+
+.Logo:hover {
+    transition: .5s;
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 991px) {
+    .BtnsSocialMedia {
+        height: 22px;
+    }
+}
