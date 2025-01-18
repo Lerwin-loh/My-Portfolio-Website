@@ -20,8 +20,8 @@ app.use(bodyParser.json());
 
 
 // To use static folder for publicly accessible HTML, CSS and Javascript files
-app.use(express.static(path.join(__dirname, '/public')));
-
+// app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static('public'));
 
 
 // Handlebars Middleware
