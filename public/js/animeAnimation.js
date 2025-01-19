@@ -95,25 +95,4 @@ anime({
     rotateY:"10",
   });
 
-  
 
-  // anime({
-  //   targets: ['.tooltip-container2', '.tooltip-container4'],
-  //   translateY: 50,
-  //   direction: 'alternate',
-  //   duration: 7000,
-  //   loop: true,
-  //   easing: 'easeInOutSine'
-  // });
-
-  // anime({
-  //   targets: ['.tooltip-container1', '.tooltip-container3'],
-  //   translateY: -50,
-  //   direction: 'alternate',
-  //   duration: 6500,
-  //   loop: true,
-  //   easing: 'easeInOutSine'
-  // });
-
-
-//   .tooltip-container2 .tooltip-container3 .tooltip-container4 .tooltip-container5 .tooltip-container6'
