@@ -48,6 +48,7 @@ else {
     
     for (var i = 0; i < navLinks.length; i++) {
     navLinks[i].style.color = "#ddd";
+    
     }
     insta.src="/img/social-media/instagram_orange.png";
 }

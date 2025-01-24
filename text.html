@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scroll</title>
+  <style>
+    body {
+      margin: 0;
+      height: 300vh; /* Make the page scrollable */
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+    <p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p><p>lerwin</p>
+  <script>
+    let scrollSpeed = 0; // Current scrolling speed
+    let scrollTarget = 0; // Target scroll position
+    let isScrolling = false; // Whether the animation is running
+
+    // Update scroll position
+    function updateScroll() {
+      if (Math.abs(scrollSpeed) > 0.1) {
+        // Smoothly approach the target
+        window.scrollTo({
+          top: scrollTarget += scrollSpeed,
+          behavior: 'instant', // Prevent abrupt behavior interference
+        });
+
+        // Gradually slow down
+        scrollSpeed *= 0.95;
+
+        // Continue animating
+        requestAnimationFrame(updateScroll);
+      } else {
+        // Stop animation when speed is very low
+        isScrolling = false;
+      }
+    }
+
+    // Listen to wheel events
+    window.addEventListener('wheel', (e) => {
+      // Adjust speed based on wheel delta
+      scrollSpeed += e.deltaY * 0.2;
+
+      // Ensure animation runs
+      if (!isScrolling) {
+        isScrolling = true;
+        requestAnimationFrame(updateScroll);
+      }
+    });
+  </script>
+</body>
+</html>

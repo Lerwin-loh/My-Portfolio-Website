@@ -4,8 +4,15 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth * window.devicePixelRatio;
 canvas.height = window.innerHeight * window.devicePixelRatio;
 
-canvas.style.width = `${window.innerWidth - 17}px`;
-canvas.style.height = `${window.innerHeight + 80}px`;
+console.log(window.innerWidth)
+if (window.innerWidth > 500) {
+    canvas.style.width = `${window.innerWidth - 17}px`;
+    canvas.style.height = `${window.innerHeight + 80}px`;
+} else{
+    canvas.style.width = `${window.innerWidth}px`;
+    canvas.style.height = `${window.innerHeight + 80}px`;
+}
+
 
 class Paricle {
     constructor(x, y, effect) {
@@ -76,8 +83,14 @@ class Effect {
                 // on mouse not moving for more than 1000 ms
                 intervalout = setInterval(func =>{
                     // Parametric equations for the infinity shape (lemniscate)
-                    var currentX = (window.innerWidth / 2) + (window.innerWidth - 300) * Math.cos(this.t);
-                    var currentY = (window.innerHeight / 2) + (window.innerHeight - 300) * Math.sin(this.t) * Math.cos(this.t);
+                    if (window.innerWidth < 500) {
+                        var currentX = (window.innerWidth / 2) + (window.innerWidth + 100) * Math.cos(this.t);
+                        var currentY = (window.innerHeight / 2) + (window.innerHeight) * Math.sin(this.t) * Math.cos(this.t);
+                    } else{
+                        var currentX = (window.innerWidth / 2) + (window.innerWidth - 300) * Math.cos(this.t);
+                        var currentY = (window.innerHeight / 2) + (window.innerHeight - 300) * Math.sin(this.t) * Math.cos(this.t);
+                    }
+                    
 
                     // Increment t to continue the movement
                     this.t += 0.05;
@@ -106,8 +119,13 @@ class Effect {
             canvas.height = window.innerHeight * window.devicePixelRatio;
             this.width = canvas.width
             this.height = canvas.height
-            canvas.style.width = `${window.innerWidth - 17}px`;
-            canvas.style.height = `${window.innerHeight + 80}px`;
+            if (window.innerWidth > 500) {
+                canvas.style.width = `${window.innerWidth - 17}px`;
+                canvas.style.height = `${window.innerHeight + 80}px`;
+            } else{
+                canvas.style.width = `${window.innerWidth}px`;
+                canvas.style.height = `${window.innerHeight + 80}px`;
+            }
 
             this.particlesArray = [];
             this.init();

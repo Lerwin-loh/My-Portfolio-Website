@@ -10,6 +10,7 @@
     font-weight: 400;
     color: white;
     scroll-behavior: smooth;
+    
 }
 
 html,
@@ -28,6 +29,7 @@ body {
 .index_title .index_title_body span {
     display: inline-block;
 }
+
 
 .bg-container {
     background-image: url(../img/bg.png);
@@ -1025,4 +1027,20 @@ body {
     .smoke_bg {
         height: 300px;
     }
+}
+
+/* X-Small devices (portrait phones, less than 400) */
+@media screen and (max-width: 450px) {
+
+    
+    .cloud {
+        top:40%;
+        right: 20%;
+    }
+
+    .cloud_2 {
+        right: 35%;
+        top:17%;
+    }
+
 }
