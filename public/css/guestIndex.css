@@ -628,9 +628,18 @@ body {
         width: calc(100vw - 191px);
     }
 
-    .timeline ul li:nth-of-type(even)>div {
-        left: 45px;
+}
+
+@media screen and (max-width: 450px) {
+    .timeline ul li {
+        margin-left: 0px;
     }
+
+    .timeline ul li div {
+        width:  calc(100vw - 100px);
+    }
+
+
 }
 
 /*-------------------------------------------------- END Timeline -------------------------------------------------- */
@@ -1032,7 +1041,27 @@ body {
 /* X-Small devices (portrait phones, less than 400) */
 @media screen and (max-width: 450px) {
 
-    
+    .mountian_p1 {
+        bottom: 40px;
+    }
+
+    .mountian_p2 {
+        bottom: 60px;
+    }
+
+    .aboutMe {
+        top: 65%;
+    }
+    .aboutMe_Desc {
+        top: 82%;
+    }
+    .myAchievements_container{
+        padding-top:160px;
+    }
+    .book {
+        left: 29.5%;
+    }
+
     .cloud {
         top:40%;
         right: 20%;
@@ -1041,6 +1070,10 @@ body {
     .cloud_2 {
         right: 35%;
         top:17%;
+    }
+
+    .smoke_bg {
+        height: 180px;
     }
 
 }
