@@ -76,6 +76,31 @@ class Effect {
         
         var intervalout;
         var timeout;
+
+
+        clearInterval(intervalout); 
+        intervalout = setInterval(func =>{
+            // Parametric equations for the infinity shape (lemniscate)
+            if (window.innerWidth < 500) {
+                var currentX = (window.innerWidth / 2) + (window.innerWidth + 100) * Math.cos(this.t);
+                var currentY = (window.innerHeight / 2) + (window.innerHeight) * Math.sin(this.t) * Math.cos(this.t);
+            } else{
+                var currentX = (window.innerWidth / 2) + (window.innerWidth - 300) * Math.cos(this.t);
+                var currentY = (window.innerHeight / 2) + (window.innerHeight - 300) * Math.sin(this.t) * Math.cos(this.t);
+            }
+            
+
+            // Increment t to continue the movement
+            this.t += 0.05;
+
+            // Reset t for a full loop when it completes a cycle (2π)
+            if (this.t > 2 * Math.PI) {
+                this.t = 0;
+            }
+            this.mouse.x = currentX
+            this.mouse.y = currentY
+        }, 80);
+        
         window.addEventListener('mousemove', e => {
             clearInterval(intervalout); 
             clearTimeout(timeout);
@@ -104,14 +129,12 @@ class Effect {
                 }, 80);
                 
                 // console.log("Hi",this.mouse.x, this.mouse.y); 
-            }, 1000);
+            }, 2000);
             
             // on mouse move
             this.mouse.x = e.clientX * window.devicePixelRatio + 15;
             this.mouse.y = e.pageY * window.devicePixelRatio - 30;
             // console.log (this.mouse.x, this.mouse.y, window.devicePixelRatio)
-
-            
         })
 
         window.addEventListener('resize', () => {

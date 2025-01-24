@@ -635,6 +635,12 @@ body {
         margin-left: 0px;
     }
 
+    .timeline ul li div div {
+        width: 99.5%;
+        margin: 11px;
+        padding:15px;
+    }
+
     .timeline ul li div {
         width:  calc(100vw - 100px);
     }
@@ -1059,7 +1065,7 @@ body {
         padding-top:160px;
     }
     .book {
-        left: 29.5%;
+        left: 29%;
     }
 
     .cloud {
