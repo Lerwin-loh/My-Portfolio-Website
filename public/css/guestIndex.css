@@ -324,8 +324,6 @@ body {
 }
 
 .book {
-    position: relative;
-    left: 25%;
     border-radius: 2px;
     width: 160px;
     height: 230px;
@@ -644,7 +642,13 @@ body {
     .timeline ul li div {
         width:  calc(100vw - 100px);
     }
+}
 
+@media screen and (max-width: 400px) {
+
+    .timeline ul li div div h4{
+        font-size: 18px;
+    }
 
 }
 
@@ -1035,16 +1039,12 @@ body {
         animation: 0;
     }
 
-    .book {
-        left: 32%;
-    }
-
     .smoke_bg {
         height: 300px;
     }
 }
 
-/* X-Small devices (portrait phones, less than 400) */
+/* XX-Small devices (portrait phones, less than 450) */
 @media screen and (max-width: 450px) {
 
     .mountian_p1 {
@@ -1064,10 +1064,25 @@ body {
     .myAchievements_container{
         padding-top:160px;
     }
-    .book {
-        left: 29%;
+
+    .cloud {
+        top:40%;
+        right: 20%;
     }
 
+    .cloud_2 {
+        right: 35%;
+        top:17%;
+    }
+
+    .smoke_bg {
+        height: 180px;
+    }
+
+}
+
+/* XXX-Small devices (portrait phones, less than 400) */
+@media screen and (max-width: 400px) {
     .cloud {
         top:40%;
         right: 20%;
