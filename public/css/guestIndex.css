@@ -160,7 +160,7 @@ body {
 
 .fade_up_bg {
     animation: fade_up_animation2 both;
-    animation-timeline: view(20% 30%);
+    animation-timeline: view(20% 20%);
 }
 
 @keyframes fade_up_animation2 {
@@ -179,7 +179,7 @@ body {
 
 .fade_up_aboutMe {
     animation: fade_up_aboutMe_animation both;
-    animation-timeline: view(55% 30%);
+    animation-timeline: view(55% 20%);
 }
 
 @keyframes fade_up_aboutMe_animation {
@@ -196,7 +196,7 @@ body {
 
 .fade_up_aboutMe_Desc {
     animation: fade_up_aboutMe_animation2 both;
-    animation-timeline: view(65% 30%);
+    animation-timeline: view(65% 20%);
 }
 
 @keyframes fade_up_aboutMe_animation2 {
@@ -308,7 +308,7 @@ body {
     text-align: center;
 
     animation: fade_up_achieve_head_title_animation both;
-    animation-timeline: view(55% 30%);
+    animation-timeline: view(55% 20%);
 }
 
 @keyframes fade_up_achieve_head_title_animation {
@@ -420,7 +420,7 @@ body {
 
 .fade_up_book {
     animation: fade_up_book_animation both;
-    animation-timeline: view(85% 30%);
+    animation-timeline: view(85% 20%);
 }
 
 @keyframes fade_up_book_animation {
@@ -652,30 +652,23 @@ body {
 
 }
 
-/*-------------------------------------------------- END Timeline -------------------------------------------------- */
-
-
-
-
-/*-------------------------------------------------- Start TESTING -------------------------------------------------- */
-
 .smoke_bg {
     height: 1000px;
 }
 
-.smoketest {
+.smoke1{
     z-index: -1;
     width: 100%;
     height: auto;
     position: relative;
     padding: 0;
-
 }
 
-.fade_up_smoketest {
+.fade_up_smoke {
     animation: fade_up_smoke_animation both;
     animation-timeline: view(100% 20%);
 }
+
 
 
 @keyframes fade_up_smoke_animation {
@@ -693,9 +686,9 @@ body {
 .lava_ash {
     background: linear-gradient(180deg, rgba(244, 216, 216), rgb(211, 128, 156));
     overflow: hidden;
-    /* width: 100%;
-    height: auto; */
-    position: absolute;
+    width: 100%;
+    height: auto;
+    position: relative;
     z-index: 0;
     padding: 0;
 }
@@ -746,9 +739,121 @@ body {
 }
 
 
+
+
+/*-------------------------------------------------- END Timeline -------------------------------------------------- */
+
+
+
+
+/*-------------------------------------------------- Start TESTING -------------------------------------------------- */
+
+
+.smoke2{
+    z-index: -1;
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 0;
+}
+.project_title{
+    color: #ffffff;
+    position:relative;
+    top:-90px;
+}
+  
+  .projects:hover {
+    height: 300px;
+  }
+  
+
+  .card {
+    position: relative;
+    aspect-ratio: 16/9;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 19px;
+    border:0;
+    background: linear-gradient(145deg, #474445, #555152);
+    box-shadow:  29px 29px 67px #353334, -29px -29px 67px #696566;
+  }
+  
+  .card__image {
+    width: 100%;
+    height: 100%;
+    filter:brightness(80%);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    background: linear-gradient(225deg, #474445, #555152);
+box-shadow:  -30px 30px 60px #242223,
+             30px -30px 60px #7a7677;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  }
+  
+  .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f2f2f2;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-radius: 19px;
+  }
+  
+  .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+  
+  .card__title {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+    font-weight: 700;
+  }
+
+  
+  .card__description {
+    margin: 10px 0 10px;
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+  }
+  
+  .card__button {
+    padding: 15px;
+    border-radius: 8px;
+    background: #777;
+    border: none;
+    color: white;
+  }
+  
+  .secondary {
+    background: transparent;
+    color: #777;
+    border: 1px solid #777;
+  }
+  
+
+
 /*-------------------------------------------------- END TESTING -------------------------------------------------- */
 
 
+
+
+/*-------------------------------------------------- RESPONSIVENESS -------------------------------------------------- */
 
 /* X-Large devices (large desktops, less than 1599.98px) */
 @media screen and (max-width: 1599.98px) {
