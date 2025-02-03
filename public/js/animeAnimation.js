@@ -96,3 +96,12 @@ anime({
   });
 
 
+  anime({
+    targets: ['.dots'],
+    translateY: -20,
+    direction: 'alternate',
+    duration: 4000,
+    loop: true,
+    easing: 'easeInOutSine',
+    scale:1.1,
+  });

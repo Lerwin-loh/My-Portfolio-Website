@@ -15,6 +15,13 @@ router.get('/', (req, res) => {
 
 });
 
+router.get('/aProject/:company', (req, res) => {
+    company = req.params.company
+    let title_body = ""
+
+    res.render('projects/aProject', { company })
+
+});
 
 
 module.exports = router;
