@@ -26,6 +26,36 @@
     padding-bottom:40px;
 }
 
+/* Back Btn */
+
+.recog_back_arr_a{
+    position: absolute;
+    left:20px;
+    color:#6e6e6e;
+    font-size: 13px; 
+    font-family:sans-serif; 
+    font-weight:600; 
+    letter-spacing:3px;
+    text-decoration: none;
+}
+.recog_back_arr{
+    width:13px;
+}
+
+.recog_back_arr_a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background-color: #ffbebe;
+    transition: width 0.3s ease-in-out;
+}
+
+.recog_back_arr_a:hover::after {
+    width: 100%;
+}
 
 /* ----------------  Gallery Start  ---------------- */
 /* Gallery container */
@@ -120,6 +150,12 @@
     transition: 0.3s;
     box-shadow: 10px 10px 40px #bebebe,
                -10px -10px 40px #ffffff;
+}
+.recog_back_arr_a{
+    opacity: 0;
+    font-size: 0px;
+    cursor: default;
+
 }
 }
 

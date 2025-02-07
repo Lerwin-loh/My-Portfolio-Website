@@ -53,66 +53,126 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// ----------------  My Achievements Anchor Point  ----------------
-// Anchorlink scrolling to middle of page
-document.querySelector('a[href="#myAchievements"]').addEventListener('click', function (e) {
-  e.preventDefault();  // Prevent default jump to the anchor
 
-  // Get the position of the anchor element
-  const anchor = document.getElementById('myAchievements');
-  const anchorPosition = anchor.getBoundingClientRect().top + window.scrollY;
 
-  // Calculate the position to scroll to (adjust by half the window height)
-  const middlePosition = anchorPosition - window.innerHeight / 2 + 80;
+// ----------------  myTestimonials Anchor Point  ----------------
+// Select all anchor links pointing to "#myAboutMe"
+let all_testimonials = document.querySelectorAll("a");
+let filtered_testimonials = Array.from(all_testimonials).filter(link => link.getAttribute("href") === "/#myTestimonials");
 
-  // Scroll to the desired position
-  window.scrollTo({
-    top: middlePosition,
-    behavior: 'smooth'
+for (let i = 0; i < filtered_testimonials.length; i++) {
+  filtered_testimonials[i].addEventListener("click", function (e) {
+    e.preventDefault();  // Prevent default anchor jump
+
+    // Check if the link is for the same page
+    const anchor = document.getElementById('myTestimonials');
+    if (anchor) {
+      scrollToAnchor(anchor);
+    } else {
+      // Different page: Navigate first, then scroll on load
+      window.location.href = "/#myTestimonials";
+    }
   });
+}
+
+// ----------------  myAchievements Anchor Point  ----------------
+// Select all anchor links pointing to "#myAboutMe"
+let all_achievements = document.querySelectorAll("a");
+let filtered_achievements = Array.from(all_achievements).filter(link => link.getAttribute("href") === "/#myAchievements");
+
+for (let i = 0; i < filtered_achievements.length; i++) {
+  filtered_achievements[i].addEventListener("click", function (e) {
+    e.preventDefault();  // Prevent default anchor jump
+
+    // Check if the link is for the same page
+    const anchor = document.getElementById('myAchievements');
+    if (anchor) {
+      scrollToAnchor(anchor);
+    } else {
+      // Different page: Navigate first, then scroll on load
+      window.location.href = "/#myAchievements";
+    }
+  });
+}
+
+// ----------------  myTimeline Anchor Point  ----------------
+// Select all anchor links pointing to "#myAboutMe"
+let all_timelines = document.querySelectorAll("a");
+let filtered_timelines = Array.from(all_timelines).filter(link => link.getAttribute("href") === "/#myTimeline");
+
+for (let i = 0; i < filtered_timelines.length; i++) {
+  filtered_timelines[i].addEventListener("click", function (e) {
+    e.preventDefault();  // Prevent default anchor jump
+
+    // Check if the link is for the same page
+    const anchor = document.getElementById('myTimeline');
+    if (anchor) {
+      scrollToAnchor(anchor);
+    } else {
+      // Different page: Navigate first, then scroll on load
+      window.location.href = "/#myTimeline";
+    }
+  });
+}
+
+// ----------------  myAboutMe Anchor Point  ----------------
+// Select all anchor links pointing to "#myAboutMe"
+let all_aboutMes = document.querySelectorAll("a");
+let filtered_aboutMes = Array.from(all_aboutMes).filter(link => link.getAttribute("href") === "/#myAboutMe");
+
+for (let i = 0; i < filtered_aboutMes.length; i++) {
+  filtered_aboutMes[i].addEventListener("click", function (e) {
+    e.preventDefault();  // Prevent default anchor jump
+
+    // Check if the link is for the same page
+    const anchor = document.getElementById('myAboutMe');
+    if (anchor) {
+      scrollToAnchor(anchor);
+    } else {
+      // Different page: Navigate first, then scroll on load
+      window.location.href = "/#myAboutMe";
+    }
+  });
+}
+
+// Function to smoothly scroll to the anchor in the middle of the screen
+function scrollToAnchor(anchor) {
+  setTimeout(() => {
+    const anchorPosition = anchor.getBoundingClientRect().top + window.scrollY;
+    const middlePosition = anchorPosition - window.innerHeight / 2 + 30;
+
+    // Smooth scroll to the middle of the page
+    window.scrollTo({
+      top: middlePosition,
+      behavior: "smooth"
+    });
+  }, 100); // Small delay to ensure rendering
+}
+
+// Handle anchor scrolling when loading the page
+window.addEventListener("load", function () {
+  if (window.location.hash === "#myAboutMe") {
+    const anchor = document.getElementById('myAboutMe');
+    scrollToAnchor(anchor);
+  }
+
+  if (window.location.hash === "#myAchievements") {
+    const anchor = document.getElementById('myAchievements');
+    scrollToAnchor(anchor);
+  }
+
+  if (window.location.hash === "#myTestimonials") {
+    const anchor = document.getElementById('myTestimonials');
+    scrollToAnchor(anchor);
+  }
+
+  if (window.location.hash === "#myTimeline") {
+    const anchor = document.getElementById('myTimeline');
+    scrollToAnchor(anchor);
+  }
 });
 
 
-
-// ----------------  My Timeline Anchor Point  ----------------
-// Anchorlink scrolling to middle of page
-document.querySelector('a[href="#myTimeline"]').addEventListener('click', function (e) {
-  e.preventDefault();  // Prevent default jump to the anchor
-
-  // Get the position of the anchor element
-  const anchor = document.getElementById('myTimeline');
-  const anchorPosition = anchor.getBoundingClientRect().top + window.scrollY;
-
-  // Calculate the position to scroll to (adjust by half the window height)
-  const middlePosition = anchorPosition - window.innerHeight / 2 + 70;
-
-  // Scroll to the desired position
-  window.scrollTo({
-    top: middlePosition,
-    behavior: 'smooth'
-  });
-});
-
-
-
-// ----------------  My AboutMe Anchor Point  ----------------
-// Anchorlink scrolling to middle of page
-document.querySelector('a[href="#myAboutMe"]').addEventListener('click', function (e) {
-  e.preventDefault();  // Prevent default jump to the anchor
-
-  // Get the position of the anchor element
-  const anchor = document.getElementById('myAboutMe');
-  const anchorPosition = anchor.getBoundingClientRect().top + window.scrollY;
-
-  // Calculate the position to scroll to (adjust by half the window height)
-  const middlePosition = anchorPosition - window.innerHeight / 2;
-
-  // Scroll to the desired position
-  window.scrollTo({
-    top: middlePosition,
-    behavior: 'smooth'
-  });
-});
 
 
 
