@@ -1,0 +1,58 @@
+<link rel="stylesheet" href="/css/style.css">
+<link href='https://fonts.googleapis.com/css?family=Sankofa Display' rel='stylesheet'>
+<div class="bg-container">
+  {{!-- Top --}}
+  <div class="container" style="padding:0%;">
+    <div class="row " style="margin:0">
+      <div class="col-12 d-flex justify-content-center">
+        <p class="test_title_body" style="text-align: center;">TESTIMONIALS</p>
+      </div>
+    </div>
+  </div>
+
+  {{!-- Body --}}
+  <div class="container-fluid main_test">
+    <div class="row " style="margin: 70px 0px 0px 0px;">
+      <div class="col-12 d-flex justify-content-center">
+        <hr class="hr_line" style="width:100px; height:1px; border-bottom: 3px solid #ff0000; z-index:1;">
+      </div>
+    </div>
+    <div class="row " style="margin: 70px 0px 0px 0px; ">
+      <div class="col-12">
+        <div class="gallery-container ">
+          <!-- Scroll Left Button -->
+          <button class="scroll-gallery-btn left-gallery-btn" onclick="scrollGallery(-1)">&#10094;</button>
+
+          <!-- Scrollable Image Gallery -->
+          <div class="scrolling-wrapper">
+            <a class="gallery-item-link" href="/img/recognitions/testimonials/mayflower_sec_p1.jpg" target="_blank">
+            <img class="gallery-item" src="/img/recognitions/testimonials/mayflower_sec_p1.jpg"  alt="Image 1">
+              </a>
+            <a class="gallery-item-link" href="/img/recognitions/testimonials/mayflower_sec_p2.jpg" target="_blank"><img class="gallery-item" src="/img/recognitions/testimonials/mayflower_sec_p2.jpg"
+               alt="Image 2"></a>          
+            <a class="gallery-item-link" href="/img/recognitions/testimonials/Poly_testimonial.jpeg" target="_blank"><img class="gallery-item" src="/img/recognitions/testimonials/Poly_testimonial.jpeg"
+               alt="Image 3"></a>
+               <a class="gallery-item-link" href="/img/recognitions/testimonials/Nanobee_Recommendation_Letter.jpg" target="_blank"><img class="gallery-item" src="/img/recognitions/testimonials/Nanobee_Recommendation_Letter.jpg"
+               alt="Image 4"></a>
+          </div>
+
+          <!-- Scroll Right Button -->
+          <button class="scroll-gallery-btn right-gallery-btn" onclick="scrollGallery(1)">&#10095;</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+    function scrollGallery(direction) {
+        const container = document.querySelector('.scrolling-wrapper');
+        let gallery_item = document.querySelector(".gallery-item");
+        let gallery_item_width = window.getComputedStyle(gallery_item).width;
+        const scrollAmount = parseInt(gallery_item_width.split("px")[0]) + 30; // Adjust scroll step
+
+        container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+</script>

@@ -7,9 +7,9 @@
     <div class="row " style="margin: 10% 0px 0px 0px;">
       <div class="col-12 d-flex justify-content-center">
         <div class="index_title" id="index_title" style="text-align: center;">
-          <a class="index_title_link" href="#myTimeline" >
+          <a class="index_title_link" href="#myTimeline">
             <p class="index_title_body">Full Stack Developer | Data Analyst | 2025</p>
-          <img src="/img/down_arrow.png" style="width: 30px; opacity:0.8;">
+            <img src="/img/down_arrow.png" style="width: 30px; opacity:0.8;">
           </a>
         </div>
 
@@ -94,8 +94,8 @@
     </div>
     <div class="col-lg-3 col-md-4 col-sm-6 myAchievements d-flex justify-content-center">
       <div class="book fade_up_book">
-        <p class="bookDesc" style="text-align:left; padding-left:32px;">1.<br>Machine Data Analytics &amp; OP
-          Intelligence<br>2.<br>RPA Development<br>3.<br>APP Development With Swift</p>
+        <p class="bookDesc" style="text-align:left; padding-left:32px;">1. Machine Data Analytics &amp; OP
+          Intelligence<br>2. RPA Development<br>3. APP Development With Swift</p>
         <div class="cover cover-img6">
           <p class="coverDesc"></p>
         </div>
@@ -129,57 +129,59 @@
 
 
 <div class="container-fluid myAchievements_container" style="background: rgb(255, 255, 255); padding: 0; ">
-  
+
   <div class="row " style="margin: 0">
     <div class="col-lg-6 col-sm-12" style="padding: 0;">
       <p class="achieve_head_title" id="myTestimonials" style="padding-top:30px;">TESTIMONIALS</p>
       <div class="row justify-content-center fade_up_aboutMe" style="margin: 0">
         <div class="col-lg-4 col-sm-4 d-flex justify-content-center" style="padding: 0;">
           <a class="aTestimonial" href="/img/recognitions/testimonials/mayflower_sec_p1.jpg" target="_blank">
-          <img class="img-fluid recog_img" src="/img/recognitions/testimonials/mayflower_sec_p1.jpg" alt="">
-          </a> 
+            <img class="img-fluid recog_img" src="/img/recognitions/testimonials/mayflower_sec_p1.jpg" alt="">
+          </a>
         </div>
         <div class="col-lg-4 col-sm-4 d-flex justify-content-center" style="padding: 0;">
           <a class="aTestimonial" href="/img/recognitions/testimonials/Poly_testimonial.jpeg" target="_blank">
             <img class="img-fluid recog_img" src="/img/recognitions/testimonials/Poly_testimonial.jpeg" alt="">
-          </a> 
+          </a>
         </div>
         <div class="col-lg-1 col-sm-1 d-flex justify-content-center" style="padding: 0;">
-          <img class="dots" src="/img/3dots1.png">
+          <a class="dots" href="/testimonials" style="text-decoration: none;"><img class="dots" src="/img/3dots1.png"></a>
         </div>
       </div>
-      
-      <button class="animated-button animated-button-left fade_left">
+
+      <a href="/testimonials" style="text-decoration: none;"><button class="animated-button animated-button-left fade_left" >
         <img class="arr-1a" src="/img/left_arrow.png">
         <span class="text left">TESTIMONIALS</span>
         <span class="circle"></span>
         <img class="arr-2a" src="/img/left_arrow.png">
-      </button>
+      </button></a>
     </div>
     <div class="col-lg-6 col-sm-12" style=" background-color: #e8eefa;">
       <p class="achieve_head_title" id="myCerts" style="padding-top:30px;">CERTIFICATES</p>
       <div class="row d-flex justify-content-center fade_up_aboutMe" style="margin: 0">
         <div class="col-lg-4 col-sm-4 d-flex justify-content-center" style="padding: 0;">
-          <a class="aTestimonial" href="/img/recognitions/certificates/secondary/mayflower_2020_merit.jpeg" target="_blank">
-            <img class="img-fluid recog_img" src="/img/recognitions/certificates/secondary/mayflower_2020_merit.jpeg" alt="">
-          </a> 
+          <a class="aTestimonial" href="/img/recognitions/certificates/secondary/mayflower_2020_merit.jpeg"
+            target="_blank">
+            <img class="img-fluid recog_img" src="/img/recognitions/certificates/secondary/mayflower_2020_merit.jpeg"
+              alt="">
+          </a>
         </div>
         <div class="col-lg-4 col-sm-4 d-flex justify-content-center" style="padding: 0;">
           <a class="aTestimonial" href="/img/recognitions/certificates/poly/dList y1s1.jpg" target="_blank">
             <img class="img-fluid recog_img" src="/img/recognitions/certificates/poly/dList y1s1.jpg" alt="">
-          </a> 
+          </a>
         </div>
         <div class="col-lg-1 col-sm-1 d-flex justify-content-center" style="padding: 0;">
-          <img class="dots" src="/img/3dots1.png">
+          <a class="dots" href="/certificates" style="text-decoration: none;"><img class="dots" src="/img/3dots1.png"></a>
         </div>
-        
+
       </div>
-      <button class="animated-button animated-button-right fade_right">
+      <a href="/certificates" style="text-decoration: none;"><button class="animated-button animated-button-right fade_right">
         <img class="arr-2b" src="/img/right_arrow.png">
         <span class="text right">CERTIFICATES</span>
         <span class="circle"></span>
         <img class="arr-1b" src="/img/right_arrow.png">
-      </button>
+      </button></a>
     </div>
   </div>
 </div>
@@ -373,3 +375,46 @@
 <br>
 <br>
 <br>
+
+
+<script>
+  window.onscroll = function () {  hide_title()};
+
+  async function testimonials_page() {
+    console.log("HI")
+    const response = await fetch("/testimonials", {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    }).then(res => {
+      if (!res.ok) {
+        return res.json().then(text => { throw new Error(text.error) })
+      }
+
+    })
+      .catch(err => {
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: err.message,
+
+        });
+        //console.log('caught it!',err.message);
+      });
+  }
+
+
+// ----------------  HIDE or SHOW index title  ----------------
+var title_div = document.getElementById("index_title");
+var title_div_offsetTop = title_div.offsetTop;
+
+function hide_title() {
+  if (window.scrollY > title_div_offsetTop) {
+    title_div.classList.add("hide_title")
+    title_div.classList.remove("show_title");
+  }
+  else {
+    title_div.classList.remove("hide_title");
+    title_div.classList.add("show_title")
+  }
+}
+</script>

@@ -1,0 +1,133 @@
+
+
+.test_title_body{
+    position: relative;
+    top:120px;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color:#4e4e4e;
+    font-family: 'Libre Baskerville';
+    z-index: 1;
+    background-color: #fff;
+    width:70%;
+    padding:30px 40px;
+}
+
+.test_title_child{
+    font-size: 20px;
+    letter-spacing: 5px;
+    color:#4e4e4e;
+    font-family: 'Libre Baskerville';
+    padding-left:6%;
+}
+
+.main_test{
+    background: #fff;
+    padding-bottom:40px;
+}
+
+
+/* ----------------  Gallery Start  ---------------- */
+/* Gallery container */
+.gallery-container {
+    position: relative;
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Scrollable wrapper */
+.scrolling-wrapper {
+    display: flex;
+    gap: 15px; /* Spacing between images */
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 40px 10px 70px 10px;    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+/* Hide scrollbar for Chrome, Edge, Safari */
+.scrolling-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+/* Image styling */
+.gallery-item {
+    flex: 0 0 auto;
+    width: 400px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 10px 10px 40px #bebebe,
+               -10px -10px 40px #ffffff;
+}
+
+.gallery-item2{
+    flex: 0 0 auto;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 10px 10px 40px #bebebe,
+               -10px -10px 40px #ffffff;
+}
+
+/* Image Link styling */
+.gallery-item-link {
+    flex: 0 0 auto;
+
+}
+
+/* Button styling */
+.scroll-gallery-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(77, 77, 77, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 100;
+}
+
+.scroll-gallery-btn:hover {
+    background-color: #4e4e4e;
+    transition: 0.4s;
+}
+
+.left-gallery-btn {
+    left: 0;
+}
+
+.right-gallery-btn {
+    right: 0;
+}
+/* ----------------  Gallery End  ---------------- */
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+.gallery-item {
+    flex: 0 0 auto;
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 10px 10px 40px #bebebe,
+               -10px -10px 40px #ffffff;
+}
+}
+
+/* XX-Small devices (portrait phones, less than 450) */
+@media screen and (max-width: 450px) {
+    .test_title_body{
+        padding:30px 20px;
+    
+    }
+}
+

@@ -1,20 +1,5 @@
-window.onscroll = function () { hide_title(), sticky_func() };
+window.onscroll = function () { sticky_func() };
 
-
-// ----------------  HIDE or SHOW index title  ----------------
-var title_div = document.getElementById("index_title");
-var title_div_offsetTop = title_div.offsetTop;
-
-function hide_title() {
-  if (window.scrollY > title_div_offsetTop) {
-    title_div.classList.add("hide_title")
-    title_div.classList.remove("show_title");
-  }
-  else {
-    title_div.classList.remove("hide_title");
-    title_div.classList.add("show_title")
-  }
-}
 
 
 // ----------------  Navbar Sticky  ----------------

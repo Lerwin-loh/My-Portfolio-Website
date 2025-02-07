@@ -23,5 +23,16 @@ router.get('/aProject/:company', (req, res) => {
 
 });
 
+router.get('/testimonials', (req, res) => {
+
+    res.render('recognitions/testimonials')
+
+});
+
+router.get('/certificates', (req, res) => {
+
+    res.render('recognitions/certificates')
+
+});
 
 module.exports = router;

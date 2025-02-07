@@ -1,130 +1,99 @@
-{{!-- <nav class="navbar navbar-expand-lg sticky-top" id="nav"> <!-- sticky-top -->
-  <div class="container-fluid" id="navbar_div">
-    {{!-- <a class="navbar-brand" href="/#">
-      <img class="Logo" src="/img/social-media/Logo_2.png" alt="LOGO">
-    </a> --}}
-    {{!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-      aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #ddd;">
-      <span class="navbar-toggler-icon"></span>
-    </button> --}}
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll  align-items-center" style="">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="/img/menu.png" style="width:30px;">
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#myAboutMe">About Me</a></li>
-            <li><a class="dropdown-item" href="#myAchievements">Achievements</a></li>
-            <li><a class="dropdown-item" href="#myTimeline">Certifications</a></li>
-            <li><a class="dropdown-item" href="#myTimeline">Timeline</a></li>
-            <li><a class="dropdown-item" href="#myAchievements">Projects</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-       
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll Gallery with Buttons</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* Gallery container */
+        .gallery-container {
+            position: relative;
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
 
-      </ul>
-      {{!-- <span class="navbar-text" style="font-size: 35px; color:#FFF; font-family:sans-serif; font-weight:600; letter-spacing:8px;">
-        LERWIN LOH.
-      </span> --}}
-      <span class="navbar-text" id="navbar-text">
-        <a class="" style="padding-right: 8px;" href="https://www.instagram.com/lerwinlow/" target="_blank"><img class="BtnsSocialMedia" src="/img/social-media/instagram_orange.png" alt="insta" id="insta_logo"></a>
-        <a class="" href="https://www.linkedin.com/in/lerwin-loh-bbb6b8224/" target="_blank"><img
-            class="BtnsSocialMedia" src="/img/social-media/linkedin.png" alt="insta"></a>
-      </span>
-  </div>
-</nav> --}}
+        /* Scrollable wrapper */
+        .scrolling-wrapper {
+            display: flex;
+            gap: 15px; /* Spacing between images */
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px;
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+        }
 
+        /* Hide scrollbar for Chrome, Edge, Safari */
+        .scrolling-wrapper::-webkit-scrollbar {
+            display: none;
+        }
 
+        /* Image styling */
+        .gallery-item {
+            flex: 0 0 auto;
+            width: 650px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
 
+        /* Button styling */
+        .scroll-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 20px;
+            z-index: 100;
+        }
 
+        .scroll-btn:hover {
+            background-color: black;
+        }
 
+        .left-btn {
+            left: 0;
+        }
 
-.navbar{
-  background-color: #dddddd00;
-}
+        .right-btn {
+            right: 0;
+        }
+    </style>
+</head>
+<body>
 
-.nav-link{
-  font-weight: 600;
-  color:#ddd;
-  letter-spacing: 1px;
-  font-size: 13px ; 
-}
+<div class="gallery-container mt-5">
+    <!-- Scroll Left Button -->
+    <button class="scroll-btn left-btn" onclick="scrollGallery(-1)">&#10094;</button>
 
-.nav-link:hover{
-  transform: scale(0.9);
-  color:#ddd;
-  transition:0.5s;
-  
-}
+    <!-- Scrollable Image Gallery -->
+    <div class="scrolling-wrapper d-flex">
+        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1yxW91.img?w=2880&h=1620&m=4&q=60" class="gallery-item" alt="Image 1">
+        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1yxW91.img?w=2880&h=1620&m=4&q=60" class="gallery-item" alt="Image 2">
+        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1yxW91.img?w=2880&h=1620&m=4&q=60" class="gallery-item" alt="Image 3">
+        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1yxW91.img?w=2880&h=1620&m=4&q=60" class="gallery-item" alt="Image 4">
+        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1yxW91.img?w=2880&h=1620&m=4&q=60" class="gallery-item" alt="Image 5">
+        <img src="https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1yxW91.img?w=2880&h=1620&m=4&q=60" class="gallery-item" alt="Image 6">
+    </div>
 
-.shrink{
-  transition: 1s;     
-  font-size: 13px  !important; 
-}   
-.unShrink{
-  transition: 1s;     
-  font-size: 15px  !important;
-}
+    <!-- Scroll Right Button -->
+    <button class="scroll-btn right-btn" onclick="scrollGallery(1)">&#10095;</button>
+</div>
 
-.shrink-nav {
-  transition: 1s;
-  padding:4px 0 4px 0;
-}
-.unShrink-nav {
-  transition: 1s;
-  padding:8px 0 8px 0;
-}
+<script>
+    function scrollGallery(direction) {
+        const container = document.querySelector('.scrolling-wrapper');
+        const scrollAmount = 650; // Adjust scroll step
+        container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+</script>
 
-.BtnsSocialMedia {
-  height: 30px;
-}
-
-.BtnsSocialMedia:hover {
-  transition: .5s;
-  transform: scale(0.9);
-}
-
-.Logo {
-  height: 45px;
-}
-
-.Logo:hover {
-  transition: .5s;
-  transform: scale(0.9);
-}
-
-@media screen and (max-width: 991px) {
-  .BtnsSocialMedia {
-      height: 22px;
-  }
-}
-
-.dropdown-menu {
-  background-color: #ddd;
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  position: absolute !important;
-  z-index: 1050; 
-  width:1000px;
-}
-
-.dropdown-item {
-  color: #3e3e3e !important;
-  padding: 10px 20px;
-  transition: background 0.3s ease-in-out;
-}
-
-.dropdown-item:hover {
-  background-color: #b4b4b4 !important;
-  color: #000000 !important;
-}
-
-.dropdown-toggle::after {
-  display: none !important;
-}
-
+</body>
+</html>

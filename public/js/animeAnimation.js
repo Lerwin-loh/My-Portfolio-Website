@@ -85,3 +85,14 @@ anime({
     easing: 'easeInOutSine',
     scale:1.1,
   });
+
+  anime({
+    targets: ['.hr_line'],
+    translateX: [-50, 50, -25],
+    direction: 'alternate',
+    duration: 4000,
+    loop: 1,
+    easing: 'easeInOutSine',
+    
+  });
+  
