@@ -22,10 +22,6 @@ body {
 
 /*---------------------- Title, Title Body ---------------------- */
 
-.index_title .index_title_header span {
-    display: inline-block;
-}
-
 .index_title .index_title_body span {
     display: inline-block;
 }
@@ -57,18 +53,28 @@ body {
 }
 
 .index_title {
+    padding-top:14%;
     height: 30svh;
 }
 
-.index_title_header span {
-    font-family: 'Sankofa Display';
-    letter-spacing: 5px;
-    font-size: 90px;
+.index_title_link{
+    text-decoration: none;
 }
 
-.index_title_body {
-    font-size: 18px;
-    letter-spacing: 2px;
+.index_title_link:hover{
+    transition: 0.5s;
+    font-size: 30px;
+}
+
+
+.index_title_body{
+    position: relative;
+    font-size: 20px;
+    letter-spacing: 5px;
+    color:#ddd;
+    font-family: 'Libre Baskerville';
+    z-index: 1;
+
 }
 
 
@@ -566,13 +572,13 @@ body {
 }
 
 .animated-button-left {
-    top: -50%;
+    top: -51%;
     left: 90%;
 }
 
 .animated-button-right {
-    top: -35%;
-    left: -10%;
+    top: -32%;
+    left: -11.5%;
 }
 
 .animated-button img {
@@ -663,6 +669,41 @@ body {
     width: 220px;
     height: 220px;
     opacity: 1;
+}
+
+.fade_left{
+    animation: fade_left_animation both;
+    animation-timeline: view(70% 20%);
+}
+
+@keyframes fade_left_animation {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+.fade_right{
+    animation: fade_right_animation both;
+    animation-timeline: view(70% 20%);
+}
+
+@keyframes fade_right_animation {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 
 
@@ -1181,12 +1222,12 @@ body {
     }
 
     .animated-button-left {
-        top: -50%;
-        left: 87%;
+        top: -51%;
+        left: 88.5%;
     }
 
     .animated-button-right {
-        top: -35%;
+        top: -32%;
         left: -13%;
     }
 
@@ -1260,14 +1301,17 @@ body {
             transform: translateY(-200px);
         }
     }
+    #myTestimonials{
+        padding-bottom:30px;
+    }
 
     .animated-button-left {
-        top: -50%;
-        left: 84%;
+        top: -51%;
+        left: 87%;
     }
 
     .animated-button-right {
-        top: -35%;
+        top: -32%;
         left: -15.5%;
     }
 
@@ -1296,12 +1340,8 @@ body {
         }
     }
 
-    .index_title_header span {
-        font-size: 60px;
-    }
-
     .index_title_body {
-        font-size: 13px;
+        font-size: 17px;
     }
 
     .moon {
@@ -1314,6 +1354,21 @@ body {
 
     .mountian_p2 {
         bottom: 200px;
+    }
+
+    .index_title {
+        padding-top:19%;
+        height: 30svh;
+    }
+
+    .cloud {
+        top: 40%;
+        right: 15%;
+    }
+    
+    .cloud_2 {
+        top: 15%;
+        right: 40%;
     }
 
     .cloud_3 {
@@ -1405,6 +1460,21 @@ body {
         bottom: 140px;
     }
 
+    .index_title {
+        padding:27% 30px 0 30px;
+        height: 30svh;
+    }
+
+    .cloud {
+        top: 40%;
+        right: 15%;
+    }
+    
+    .cloud_2 {
+        top: 13%;
+        right: 40%;
+    }
+
     .cloud_3 {
         opacity: 0;
     }
@@ -1432,9 +1502,9 @@ body {
         height: 400px;
     }
 
-    #myTestimonials {
+    /* #myTestimonials {
         height: 140px;
-    }
+    } */
 
     #myCerts {
         height: 140px;
@@ -1467,6 +1537,14 @@ body {
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 575.98px) {
+    .index_title {
+        padding:27% 30px 0 30px;
+    }
+
+    .index_title_body {
+        font-size: 14px;
+    }
+
     .cloud {
         right: 20%;
     }
@@ -1507,13 +1585,17 @@ body {
         height: 300px;
     }
 
+    #myTestimonials{
+        padding-bottom:50px;
+    }
+
     .animated-button-left {
-        top: -89.5%;
+        top: -87.5%;
         left: 36.5%;
     }
 
     .animated-button-right {
-        top: -88.5%;
+        top: -85.5%;
         left: 38%;
     }
 
@@ -1528,6 +1610,13 @@ body {
 
 /* XX-Small devices (portrait phones, less than 450) */
 @media screen and (max-width: 450px) {
+    .index_title {
+        padding:37% 40px 0 40px;
+    }
+
+    .index_title_body {
+        font-size: 12px;
+    }
 
     .mountian_p1 {
         bottom: 40px;
@@ -1564,12 +1653,12 @@ body {
     }
 
     .animated-button-left {
-        top: -87%;
+        top: -85.5%;
         left: 32%;
     }
 
     .animated-button-right {
-        top: -86.5%;
+        top: -83.5%;
         left: 35%;
     }
 
@@ -1577,6 +1666,10 @@ body {
 
 /* XXX-Small devices (portrait phones, less than 400) */
 @media screen and (max-width: 400px) {
+    .index_title {
+        padding-top:45%;
+    }
+
     .cloud {
         top: 40%;
         right: 20%;
@@ -1592,12 +1685,12 @@ body {
     }
 
     .animated-button-left {
-        top: -85%;
+        top: -83%;
         left: 30%;
     }
 
     .animated-button-right {
-        top: -85%;
+        top: -82%;
         left: 30%;
     }
 

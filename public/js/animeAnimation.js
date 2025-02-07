@@ -1,23 +1,3 @@
-let header = document.querySelector('.index_title .index_title_header')
-
-header.innerHTML = header.innerText.split("").map(function (char) {
-    if (char == " ") {
-        char = "&nbsp;";
-    }
-    return "<span>" + char + "</span>";
-}).join("");
-
-
-anime({
-    targets: ".index_title .index_title_header span",
-    loop: true,
-    scale: [1.1, 1],
-    opacity: [0, 1],
-    duration:7000,
-    delay: function (element, i) {
-        return i * 200
-    }
-})
 
 
 

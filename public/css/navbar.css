@@ -1,38 +1,84 @@
-
 .navbar{
     background-color: #dddddd00;
-}
+  }
 
-.nav-link{
-    font-weight: 600;
-    color:#ddd;
-    letter-spacing: 1px;
-    font-size: 13px ; 
-}
+  .Logo {
+    height: 35px;
+  }
 
-.nav-link:hover{
+  .Name_logo{
+    font-size: 12px; 
+    color:white;
+    font-family:sans-serif; 
+    font-weight:600; 
+    letter-spacing:6px;
+  }
+  
+  .Logo:hover {
+    transition: .5s;
     transform: scale(0.9);
-    color:#ddd;
-    transition:0.5s;
-    
+  }
+
+.navbar-collapse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #3e4149;
 }
 
-.shrink{
-    transition: 1s;     
-    font-size: 13px  !important; 
-}   
-.unShrink{
-    transition: 1s;     
-    font-size: 15px  !important;
+.navbar-toggler{
+    border:0;
 }
 
-.shrink-nav {
-    transition: 1s;
-    padding:4px 0 4px 0;
+.navbar-toggler-icon{
+    filter:invert(15%) contrast(100%);
 }
-.unShrink-nav {
-    transition: 1s;
-    padding:8px 0 8px 0;
+
+.navbar-toggler:hover{
+    border:0;
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+
+.navbar-toggler,
+.navbar-brand {
+    z-index: 1;
+}
+
+.navbar-brand {
+    font-size: 1.8em;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-collapse .nav-link {
+    font-size: 1.5em;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+.navbar-collapse .nav-link:hover,
+.navbar-collapse .nav-link.active {
+    color: rgb(156, 174, 211);
+    transform: scale(0.9);
+    transition: all 0.5s;
+}
+
+.nav-item:not(:last-child) {
+    border-bottom: 1px solid gray;
+    padding: 0.2em 4em;
+}
+
+.navbar-collapse.show {
+    transition: all 0.5s;
 }
 
 .BtnsSocialMedia {
@@ -44,17 +90,37 @@
     transform: scale(0.9);
 }
 
-.Logo {
-    height: 45px;
-}
 
-.Logo:hover {
-    transition: .5s;
-    transform: scale(0.9);
-}
+
 
 @media screen and (max-width: 991px) {
     .BtnsSocialMedia {
         height: 22px;
     }
+  }
+
+@media screen and (max-width: 768px) {
+    .nav-item:not(:last-child) {
+        padding: 0.5em 8em;
+    }
+    .navbar-collapse .nav-link {
+        font-size: 1.1em;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+    
+}
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) {
+    .nav-item:not(:last-child) {
+        padding: 0.5em 2em;
+    }
+    .navbar-collapse .nav-link {
+        font-size: 1em;
+        letter-spacing: 2px;
+        color: #fff;
+    }
+
 }
