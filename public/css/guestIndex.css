@@ -1223,8 +1223,8 @@ body {
     }
 
     .animated-button-left {
-        top: -51% !important;
-        left: 88.5% !important;
+        top: -51% ;
+        left: 88.5% ;
     }
 
     .animated-button-right {
@@ -1317,8 +1317,8 @@ body {
     }
 
     .animated-button-left {
-        top: -51% !important;
-        left: 87% !important;
+        top: -51%;
+        left: 87%;
     }
 
     .animated-button-right {
@@ -1342,7 +1342,7 @@ body {
     body {
         border: 10px solid red;
     }
-    
+
     @keyframes fade_up_animation {
         from {
             opacity: 0;
@@ -1450,8 +1450,8 @@ body {
     }
 
     .animated-button-left {
-        top: -40% !important;
-        left: 81% !important;
+        top: -40% ;
+        left: 81% ;
     }
 
     /* .fade_left{
@@ -1533,8 +1533,8 @@ body {
     }
 
     .animated-button-left {
-        top: -76% !important;
-        left: 41% !important;
+        top: -76% ;
+        left: 41% ;
     }
 
     .animated-button-right {
@@ -1547,8 +1547,8 @@ body {
 /* X-Small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 694.98px) {
     .animated-button-left {
-        top: -72% !important;
-        left: 41% !important;
+        top: -72% ;
+        left: 41% ;
     }
 
     .animated-button-right {
@@ -1612,8 +1612,10 @@ body {
     }
 
     .animated-button-left {
-        top: -87.5% !important;
-        left: 36.5% !important;
+        background-color: red !important;
+        /* transform: translate(-50%, -85vh); */
+        top: -87.5% ;
+        left: 36.5% ;
     }
 
     .animated-button-right {
@@ -1675,8 +1677,8 @@ body {
     }
 
     .animated-button-left {
-        top: -85.5% !important;
-        left: 32% !important;
+        top: -85.5% ;
+        left: 32% ;
     }
 
     .animated-button-right {
@@ -1707,8 +1709,8 @@ body {
     }
 
     .animated-button-left {
-        top: -83% !important;
-        left: 30% !important;
+        top: -83% ;
+        left: 30% ;
     }
 
     .animated-button-right {
