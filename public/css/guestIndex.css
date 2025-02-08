@@ -1223,8 +1223,8 @@ body {
     }
 
     .animated-button-left {
-        top: -51%;
-        left: 88.5%;
+        top: -51% !important;
+        left: 88.5% !important;
     }
 
     .animated-button-right {
@@ -1317,8 +1317,8 @@ body {
     }
 
     .animated-button-left {
-        top: -51%;
-        left: 87%;
+        top: -51% !important;
+        left: 87% !important;
     }
 
     .animated-button-right {
@@ -1446,8 +1446,8 @@ body {
     }
 
     .animated-button-left {
-        top: -40%;
-        left: 81%;
+        top: -40% !important;
+        left: 81% !important;
     }
 
     /* .fade_left{
@@ -1529,8 +1529,8 @@ body {
     }
 
     .animated-button-left {
-        top: -76%;
-        left: 41%;
+        top: -76% !important;
+        left: 41% !important;
     }
 
     .animated-button-right {
@@ -1543,8 +1543,8 @@ body {
 /* X-Small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 694.98px) {
     .animated-button-left {
-        top: -72%;
-        left: 41%;
+        top: -72% !important;
+        left: 41% !important;
     }
 
     .animated-button-right {
@@ -1608,8 +1608,8 @@ body {
     }
 
     .animated-button-left {
-        top: -87.5%;
-        left: 36.5%;
+        top: -87.5% !important;
+        left: 36.5% !important;
     }
 
     .animated-button-right {
@@ -1671,8 +1671,8 @@ body {
     }
 
     .animated-button-left {
-        top: -85.5%;
-        left: 32%;
+        top: -85.5% !important;
+        left: 32% !important;
     }
 
     .animated-button-right {
@@ -1703,8 +1703,8 @@ body {
     }
 
     .animated-button-left {
-        top: -83%;
-        left: 30%;
+        top: -83% !important;
+        left: 30% !important;
     }
 
     .animated-button-right {
