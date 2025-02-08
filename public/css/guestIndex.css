@@ -1339,6 +1339,10 @@ body {
 
 /* Medium devices (tablets, less than 992px) */
 @media screen and (max-width: 991.98px) {
+    body {
+        border: 10px solid red;
+    }
+    
     @keyframes fade_up_animation {
         from {
             opacity: 0;
