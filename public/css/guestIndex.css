@@ -561,7 +561,7 @@ body {
 }
 
 .animated-button-left {
-    top: 29%;
+    top: -51%;
     left: 90%;
 }
 
@@ -1172,15 +1172,6 @@ body {
     .smoke_bg {
         height: 780px;
     }
-    .animated-button-left {
-        top: 24% ;
-        left: 88.5% ;
-    }
-
-    .animated-button-right {
-        top: -32%;
-        left: -13%;
-    }
 
 }
 
@@ -1232,8 +1223,8 @@ body {
     }
 
     .animated-button-left {
-        top: 20% ;
-        left: 89% ;
+        top: -51% ;
+        left: 88.5% ;
     }
 
     .animated-button-right {
@@ -1326,8 +1317,8 @@ body {
     }
 
     .animated-button-left {
-        top: 15% ;
-        left: 89% ;
+        top: -51%;
+        left: 87%;
     }
 
     .animated-button-right {
@@ -1456,8 +1447,8 @@ body {
     }
 
     .animated-button-left {
-        /* top: -40% ;
-        left: 81% ; */
+        top: -40% ;
+        left: 81% ;
     }
 
     /* .fade_left{
@@ -1539,8 +1530,8 @@ body {
     }
 
     .animated-button-left {
-        /* top: -76% ;
-        left: 41% ; */
+        top: -76% ;
+        left: 41% ;
     }
 
     .animated-button-right {
@@ -1553,8 +1544,8 @@ body {
 /* X-Small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 694.98px) {
     .animated-button-left {
-        /* top: -72% ;
-        left: 41% ; */
+        top: -72% ;
+        left: 41% ;
     }
 
     .animated-button-right {
@@ -1618,7 +1609,7 @@ body {
     }
 
     .animated-button-left {
-        top: -2% ;
+        top: -87.5% ;
         left: 36.5% ;
     }
 
@@ -1681,8 +1672,8 @@ body {
     }
 
     .animated-button-left {
-        top: -2% ;
-        left: 33.5% ;
+        top: -85.5% ;
+        left: 32% ;
     }
 
     .animated-button-right {
@@ -1713,8 +1704,8 @@ body {
     }
 
     .animated-button-left {
-        top: -2% ;
-        left: 31.5% ;
+        top: -83% ;
+        left: 30% ;
     }
 
     .animated-button-right {
