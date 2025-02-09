@@ -561,7 +561,7 @@ body {
 }
 
 .animated-button-left {
-    top: -51%;
+    top: 29%;
     left: 90%;
 }
 
@@ -1172,6 +1172,15 @@ body {
     .smoke_bg {
         height: 780px;
     }
+    .animated-button-left {
+        top: 24% ;
+        left: 88.5% ;
+    }
+
+    .animated-button-right {
+        top: -32%;
+        left: -13%;
+    }
 
 }
 
@@ -1223,8 +1232,8 @@ body {
     }
 
     .animated-button-left {
-        top: -51% ;
-        left: 88.5% ;
+        top: 20% ;
+        left: 89% ;
     }
 
     .animated-button-right {
@@ -1317,8 +1326,8 @@ body {
     }
 
     .animated-button-left {
-        top: -51%;
-        left: 87%;
+        top: 15% ;
+        left: 89% ;
     }
 
     .animated-button-right {
@@ -1339,9 +1348,6 @@ body {
 
 /* Medium devices (tablets, less than 992px) */
 @media screen and (max-width: 991.98px) {
-    body {
-        border: 10px solid red;
-    }
 
     @keyframes fade_up_animation {
         from {
@@ -1450,8 +1456,8 @@ body {
     }
 
     .animated-button-left {
-        top: -40% ;
-        left: 81% ;
+        /* top: -40% ;
+        left: 81% ; */
     }
 
     /* .fade_left{
@@ -1533,8 +1539,8 @@ body {
     }
 
     .animated-button-left {
-        top: -76% ;
-        left: 41% ;
+        /* top: -76% ;
+        left: 41% ; */
     }
 
     .animated-button-right {
@@ -1547,8 +1553,8 @@ body {
 /* X-Small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 694.98px) {
     .animated-button-left {
-        top: -72% ;
-        left: 41% ;
+        /* top: -72% ;
+        left: 41% ; */
     }
 
     .animated-button-right {
@@ -1612,9 +1618,7 @@ body {
     }
 
     .animated-button-left {
-        background-color: red !important;
-        /* transform: translate(-50%, -85vh); */
-        top: -87.5% ;
+        top: -2% ;
         left: 36.5% ;
     }
 
@@ -1677,8 +1681,8 @@ body {
     }
 
     .animated-button-left {
-        top: -85.5% ;
-        left: 32% ;
+        top: -2% ;
+        left: 33.5% ;
     }
 
     .animated-button-right {
@@ -1709,8 +1713,8 @@ body {
     }
 
     .animated-button-left {
-        top: -83% ;
-        left: 30% ;
+        top: -2% ;
+        left: 31.5% ;
     }
 
     .animated-button-right {
