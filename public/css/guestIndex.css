@@ -304,14 +304,17 @@ body {
     font-weight: 500;
     letter-spacing: 2px;
     color: rgb(62, 62, 62);
-    opacity: 1;
+    /* opacity: 1; */
     text-align: center;
 
-    animation: fade_up_achieve_head_title_animation both;
-    animation-timeline: view(55% 20%);
+    /* animation: fade_up_achieve_head_title_animation both;
+    animation-timeline: view(55% 20%); */
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-@keyframes fade_up_achieve_head_title_animation {
+/* @keyframes fade_up_achieve_head_title_animation {
     from {
         opacity: 0;
         transform: translateY(100px);
@@ -321,6 +324,11 @@ body {
         opacity: 1;
         transform: translateY(0px);
     }
+} */
+
+.achieve_head_title.head_title_visible { 
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .book {
@@ -417,7 +425,7 @@ body {
     font-weight: 500;
 }
 
-.fade_up_book {
+/* .fade_up_book {
     animation: fade_up_book_animation both;
     animation-timeline: view(85% 20%);
 }
@@ -432,6 +440,17 @@ body {
         opacity: 1;
         transform: translateY(0px);
     }
+} */
+
+.fade_up_book {
+    opacity: 0;
+    transform: translateY(-70px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade_up_book.fade_visible { 
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ---------------------- My Achievements (TESTING) ---------------------- */
@@ -1704,13 +1723,13 @@ body {
     }
 
     .animated-button-left {
-        top: -83% ;
-        left: 30% ;
+        top: -85% ;
+        left: 31% ;
     }
 
     .animated-button-right {
-        top: -82%;
-        left: 30%;
+        top: -84%;
+        left: 31%;
     }
 
 }

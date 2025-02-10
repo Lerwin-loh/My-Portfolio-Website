@@ -173,7 +173,45 @@ window.addEventListener("load", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  let fade_up_book_elements = document.querySelectorAll(".fade_up_book");
+  let achieve_head_title_elements = document.querySelectorAll(".achieve_head_title");
 
+  let fade_up_book_observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add("fade_visible");
+          } else {
+            entry.target.classList.remove("fade_visible"); // Fade out
+        }
+      });
+  }, { threshold: [0.8,0.85,0.9,0.95, 1] }); // Trigger when 20% of the element is visible
+
+  fade_up_book_elements.forEach((el) => {
+    fade_up_book_observer.observe(el);
+  });
+
+
+  let achieve_head_title_observer = new IntersectionObserver((entries) => {
+    console.log(entries)
+    console.log("++++++++++++++")
+    entries.forEach((entry) => {
+      
+        if (entry.isIntersecting) {
+          console.log("inside", entry)
+            entry.target.classList.add("head_title_visible");
+        } else {
+          entry.target.classList.remove("head_title_visible"); // Fade out
+      }
+    });
+}, { threshold:[0.8,0.85,0.9,0.95, 1] }); // Trigger when 20% of the element is visible
+
+achieve_head_title_elements.forEach((el) => {
+  achieve_head_title_observer.observe(el);
+});
+
+
+});
 
 
 // ----------------  Timeline Fade In On Scroll  ----------------
@@ -199,6 +237,17 @@ function callbackFunc() {
       items[i].classList.remove("in-view");
     }
   }
+
+  // for (var i = 0; i < achieve_head_title_elements.length; i++) {
+  //   if (isElementInViewport(achieve_head_title_elements[i])) {
+  //     if (!achieve_head_title_elements[i].classList.contains("head_title_visible")) {
+  //       achieve_head_title_elements[i].classList.add("head_title_visible");
+  //     }
+  //   } else if (achieve_head_title_elements[i].classList.contains("head_title_visible")) {
+  //     achieve_head_title_elements[i].classList.remove("head_title_visible");
+  //   }
+  // }
+
 }
 
 window.addEventListener("load", callbackFunc);
