@@ -138,6 +138,15 @@
 }
 /* ----------------  Gallery End  ---------------- */
 
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 767.98px) {
+    .recog_back_arr_a{
+        opacity: 0;
+        font-size: 0px;
+        cursor: default;
+    }
+}
+
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 575.98px) {
@@ -151,12 +160,7 @@
     box-shadow: 10px 10px 40px #bebebe,
                -10px -10px 40px #ffffff;
 }
-.recog_back_arr_a{
-    opacity: 0;
-    font-size: 0px;
-    cursor: default;
 
-}
 }
 
 /* XX-Small devices (portrait phones, less than 450) */
