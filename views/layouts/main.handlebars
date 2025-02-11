@@ -43,10 +43,10 @@
 
 <body style="">
 	<div class="preloader" id="preloader">
-	<div class="loader"></div>
-	<div class="loader"></div>
-	<div class="loader"></div>
-</div>
+		<div class="loader"></div>
+		<div class="loader"></div>
+		<div class="loader"></div>
+	</div>
 
 	<div class="container-fluid" style="padding:0%;">
 		{{> _navbar}}
@@ -91,6 +91,9 @@
 {{!-- ---------------------- Pre-Loader ---------------------- --}}
 <script>
 	window.addEventListener("load", function () {
-		document.getElementById("preloader").style.display = "none";
+		document.getElementById("preloader").classList.add("ease-fade-out");
+		setTimeout(() => {
+			document.getElementById("preloader").style.display = "none";
+		}, 500); // Match the transition duration
 	});
 </script>
