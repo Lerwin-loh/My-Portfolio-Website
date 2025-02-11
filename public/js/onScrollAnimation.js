@@ -1,4 +1,4 @@
-window.onscroll = function () { sticky_func() };
+window.onscroll = function () { sticky_func(), scrollFunction()};
 
 
 
@@ -54,6 +54,22 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+var toTop_button = document.getElementById("backToTopBtn");
+
+function scrollFunction() {
+    console.log(document.body.scrollTop, document.documentElement.scrollTop)
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      toTop_button.style.display = "flex";
+    } else {
+      toTop_button.style.display = "none";
+    }
+}
+
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 // ----------------  myTestimonials Anchor Point  ----------------
 // Select all anchor links pointing to "#myAboutMe"

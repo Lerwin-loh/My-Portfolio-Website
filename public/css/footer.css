@@ -1,0 +1,145 @@
+/*--------------------------  Footer  --------------------------*/
+
+.footer{
+    background-color: white;
+    color:#3e3e3e;
+}
+
+.logoTitleHead{
+    text-decoration: none;
+}
+
+.logoTitleHead:hover {
+    transition: 0.8s;
+    transform: scale(0.9);
+}
+
+.footer_header{
+    color: #333;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+}
+
+.copyRight {
+    color:#3e3e3e;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: -0.02em;
+}
+
+.footerBtns {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    color: #3e3e3e;
+}
+
+.footerBtns:hover {
+    text-decoration: none;
+    transform: scale(0.95);
+    transition: 0.5s;
+}
+
+
+
+
+@media screen and (max-width: 1400px) {
+
+}
+
+@media screen and (max-width: 992px) {
+    .footerAlignWhenSmall {
+        margin-bottom:19px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .footerAlignWhenSmall {
+        margin-bottom:19px;
+        text-align: center;
+    }
+}
+/*--------------------------  back To Top Btn  --------------------------*/
+
+
+/* #backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 27.5px;
+    z-index: 99;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: rgba(238, 56, 85);
+    border: 2px solid rgba(238, 56, 85);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#backToTopBtn:hover {
+    color: rgba(238, 56, 85);
+    transition: 0.3s;
+    background-color: #f7f5f5;
+    border: 2px solid rgba(238, 56, 85);
+} */
+
+/* testing */
+.backToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 27.5px;
+    right: 27.5px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e8eefa;
+    border: none;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 0px 4px rgba(232, 238, 250, 0.553);
+    cursor: pointer;
+    transition-duration: 0.3s;
+    overflow: hidden;
+  }
+  
+  .backToTopBtn:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: 0.3s;
+    background-color: #e8eefa;
+    align-items: center;
+  }
+  
+  .backToTopBtn:hover .up_arr {
+    transition: 0.3s;
+    transform: translateY(-200%);
+  }
+  
+  .backToTopBtn::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back To Top";
+    color: #4e4e4e;
+    /* transition-duration: .3s; */
+    font-size: 0px;
+  }
+  
+  .backToTopBtn:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    bottom: unset;
+    /* transform: translateY(-30px); */
+    transition-duration: 0.3s;
+  }
+  
