@@ -4,6 +4,7 @@ const exphbs = require('express-handlebars');
 const Handlebars = require('handlebars');
 const app = express();
 const bodyParser = require('body-parser');
+require('dotenv').config();
 
 // -----------------------------------------------------  Google Firebase  -----------------------------------------------------
 const admin = require('firebase-admin'); 
