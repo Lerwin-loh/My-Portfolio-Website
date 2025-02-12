@@ -56,7 +56,7 @@ app.engine('handlebars', exphbs.engine({
 app.set('view engine', 'handlebars');
 
 Handlebars.registerHelper('ifIn', function(value, array, options) {
-    if (Array.isArray(array) && array.indexOf(value) !== -1) {
+    if (Array.isArray(array) && array.indexOf(value.toUpperCase()) !== -1) {
       // Condition is met, so render the main block
       return options.fn(this);
     } else {

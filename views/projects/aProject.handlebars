@@ -10,33 +10,39 @@
           <p class="proj_type">{{aProj.type}}</p>
           <p class="proj_techncalDesc">{{aProj.company_desc}}</p>
           <p class="proj_techncalDesc">
-          {{#ifIn "HTML" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/html.png" alt=""> 
-          {{/ifIn}}
-          {{#ifIn "CSS" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/css.png" alt=""> 
-          {{/ifIn}}
-          {{#ifIn "JS" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/javascript.png" alt=""> 
-          {{/ifIn}}
-          {{#ifIn "PYTHON" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/python.png" alt=""> 
-          {{/ifIn}}
-          {{#ifIn "SQL" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/sql.png" alt=""> 
-          {{/ifIn}}
-          {{#ifIn "FIREBASE" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/firebase.png" alt=""> 
-          {{/ifIn}}
-          {{#ifIn "NODEJS" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/nodejs.png" alt=""> 
-          {{/ifIn}}
-          {{#ifIn "FLASK" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/flask.png" alt=""> 
-          {{/ifIn}}
-          {{#ifIn "CSHARP" aProj.skills}}
-            <img class="proj_icon skill_icon" src="/img/icons/csharp.png" alt=""> 
-          {{/ifIn}}
+            {{#ifIn "HTML" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/html.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "CSS" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/css.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "JS" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/javascript.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "PYTHON" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/python.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "SQL" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/sql.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "FIREBASE" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/firebase.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "BLOCKCHAIN" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/blockchain.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "CSHARP" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/uipath.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "NODEJS" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/nodejs.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "FLASK" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/flask.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "CSHARP" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/csharp.png" alt="">
+            {{/ifIn}}
           </p>
         </div>
 
@@ -46,65 +52,30 @@
   <div class="container main_proj" style="padding-bottom: 10svh;">
     <div class="row " style="padding: 220px 0px 0px 0px;">
       <!-- item -->
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center" data-aos="fade-up"
-        data-aos-duration="1000">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center"
+        data-aos="fade-up" data-aos-duration="1000">
         <!-- Carousel -->
         <div id="proj_demo_intern" class="carousel slide" data-bs-ride="carousel">
 
           <!-- Indicators/dots -->
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#proj_demo_intern" data-bs-slide-to="0" class="active" style="background-color: #5e5e5e;"></button>
-            <button type="button" data-bs-target="#proj_demo_intern" data-bs-slide-to="1" style="background-color: #5e5e5e;"></button>
-            <button type="button" data-bs-target="#proj_demo_intern" data-bs-slide-to="2" style="background-color: #5e5e5e;"></button>
-            <button type="button" data-bs-target="#proj_demo_intern" data-bs-slide-to="3" style="background-color: #5e5e5e;"></button>
-            <button type="button" data-bs-target="#proj_demo_intern" data-bs-slide-to="4" style="background-color: #5e5e5e;"></button>
-            <button type="button" data-bs-target="#proj_demo_intern" data-bs-slide-to="5" style="background-color: #5e5e5e;"></button>
-            <button type="button" data-bs-target="#proj_demo_intern" data-bs-slide-to="6" style="background-color: #5e5e5e;"></button>
+            {{#each aProj.title_images}}
+            <button type="button" data-bs-target="#proj_demo_intern" data-bs-slide-to="{{@index}}"
+              class="{{#if @first}} active {{/if}}" style="background-color: #5e5e5e;"></button>
+            {{/each}}
           </div>
           <!-- The slideshow/carousel -->
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="proj_image" src="/img/projects/proctor/shelfie.png" alt="" class="d-block w-100">
+            {{#each aProj.title_images}}
+            <div class="carousel-item {{#if @first}} active {{/if}}">
+              <a class="" href="{{this}}" target="_blank">
+                <img src="{{this}}" alt="" class="proj_image d-block w-100">
+              </a>
               <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">Model API</p>
+                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">{{@key}}</p>
               </div>
             </div>
-            <div class="carousel-item">
-              <img class="proj_image" src="/img/projects/proctor/shelfie_result.png" alt="" class="d-block w-100">
-              <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">Model Result</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="proj_image" src="/img/projects/proctor/shelfie_analysis.png" alt="" class="d-block w-100">
-              <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">Model Analysis</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="proj_image" src="/img/projects/proctor/preprocess_algo.png" alt="" class="d-block w-100">
-              <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">Data Pre-Processing Algorithm</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="proj_image" src="/img/projects/proctor/brand_algo.png" alt="" class="d-block w-100">
-              <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">Brand Detection Algorithm</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="proj_image" src="/img/projects/proctor/product_algo_ocr.png" alt="" class="d-block w-100">
-              <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">Product Detection Algorithm Using OCR-Text</p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="proj_image" src="/img/projects/proctor/product_algo_image.png" alt="" class="d-block w-100">
-              <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">Product Detection Algorithm Using Image</p>
-              </div>
-            </div>
+            {{/each}}
           </div>
 
           <!-- Left and right controls/icons -->
@@ -121,70 +92,172 @@
         <p class="proj_title">{{aProj_dateFrom}} - {{aProj_dateTo}}</p>
         <p class="proj_roleDesc">{{aProj.role_desc}}</p>
         <p class="proj_title">Techniques Used: </p>
-        <p class="proj_roleDesc">
-          <nobr><img class="proj_icon" src="/img/icons/google_api.png" alt=""> Google Vision API</nobr>
-          <nobr><img class="proj_icon" src="/img/icons/ocr_text.png" alt=""> OCR-Text</nobr>
-          <nobr><img class="proj_icon" src="/img/icons/resnet.png" alt=""> &nbsp;ResNet-18 & ResNet-50 Embedding</nobr>
-          <nobr><img class="proj_icon" src="/img/icons/tokenization.png" alt=""> Tokenization</nobr>
-          <nobr><img class="proj_icon" src="/img/icons/algorithm.png" alt=""> &nbsp;Levenshtein Distance Algorithm (Fuzzywuzzy)</nobr>
-          <nobr><img class="proj_icon" src="/img/icons/faiss.png" alt=""> &nbsp;Facebook AI Similarity Search (FAISS)</nobr>
-          <nobr><img class="proj_icon" src="/img/icons/scoring.png" alt=""> &nbsp;Confidence Scoring</nobr>
+        <p class="proj_roleDesc" id="proj_roleDesc">
         </p>
-    </div>
-    <div class="row " style="padding: 170px 0px 0px 0px; overflow:clip;">
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-start" data-aos="fade-up-right" data-aos-duration="2000">
-        <p class="proj_title" style="margin-left:20px">Project Involvement & Scheduling</p>
-        <p class="proj_roleDesc" style="margin-left:20px">{{aProj.involvement_scheduling}}</p>
+      </div>
+      <div class="row " style="padding: 170px 0px 0px 0px; overflow:clip;">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-start"
+          data-aos="fade-up-right" data-aos-duration="2000">
+          <p class="proj_title" style="margin-left:20px">Project Involvement & Scheduling</p>
+          <p class="proj_roleDesc" style="margin-left:20px">{{aProj.involvement_scheduling}}</p>
 
-        <!-- Carousel -->
-        <div id="proj_demo_intern_2" class="carousel slide" data-bs-ride="carousel">
+          <!-- Carousel -->
+          <div id="proj_demo_intern_2" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              {{#each aProj.involvement_scheduling_images}}
+              <button type="button" data-bs-target="#proj_demo_intern_2" data-bs-slide-to="{{@index}}"
+                class="{{#if @first}} active {{/if}}" style="background-color: #5e5e5e;"></button>
+              {{/each}}
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              {{#each aProj.involvement_scheduling_images}}
+              <div class="carousel-item {{#if @first}} active {{/if}}">
+                <a class="" href="{{this}}" target="_blank">
+                  <img class="proj_image" src="{{this}}" alt="" class="d-block w-100">
+                </a>
+                <div class="carousel-caption">
+                  <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">{{@key}}</p>
+                </div>
+              </div>
+              {{/each}}
 
-          <!-- Indicators/dots -->
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#proj_demo_intern_2" data-bs-slide-to="0" class="active" style="background-color: #5e5e5e;"></button>
-            <button type="button" data-bs-target="#proj_demo_intern_2" data-bs-slide-to="1" style="background-color: #5e5e5e;"></button>
+              <!-- Left and right controls/icons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#proj_demo_intern_2"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"
+                  style="background-color: #5e5e5e83; border-radius:30px;"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#proj_demo_intern_2"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"
+                  style="background-color: #5e5e5e83; border-radius:30px;"></span>
+              </button>
+            </div>
           </div>
-          <!-- The slideshow/carousel -->
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img class="proj_image" src="/img/projects/proctor/shelfie_timeline.png" alt="" class="d-block w-100">
-              <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;"></p>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <img class="proj_image" src="/img/projects/proctor/accuracy_chart.png" alt="" class="d-block w-100">
-              <div class="carousel-caption">
-                <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">Model Accuracy Rate Over 6 Iterations</p>
-              </div>
-            </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
+      </div>
+      {{#if aProj.use_case}}
+      <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-end"
+          data-aos="fade-up-left" data-aos-duration="2000">
+          <p class="proj_title" style="margin-right:20px">Use Case</p>
+          <p class="proj_roleDesc" style="margin-right:20px; text-align:end">{{aProj.use_case}}</p>
+        </div>
+      </div>
+      {{/if}}
+      {{#if aProj.front_end}}
+      <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-end"
+          data-aos="fade-up-left" data-aos-duration="2000">
+          <p class="proj_title" style="margin-right:0px">Front-End Site</p>
+          <p class="proj_roleDesc" style="margin-right:0px; text-align:end">{{aProj.front_end}}</p>
+          {{#each aProj.front_end_images}}
+          <video width="100%" height="100%" controls>
+            <source src="{{this}}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          {{/each}}
+        </div>
+      </div>
+      {{/if}}
+      {{#if aProj.back_end}}
+      <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-start"
+          data-aos="fade-up-right" data-aos-duration="2000">
+          <p class="proj_title" style="margin-left:0px">Back-End Site</p>
+          <p class="proj_roleDesc" style="margin-left:0px; text-align:start">{{aProj.back_end}}</p>
+          {{#each aProj.back_end_images}}
+          <video width="100%" height="100%" controls>
+            <source src="{{this}}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          {{/each}}
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
+      </div>
+      {{/if}}
+      {{#if aProj.database_info}}
+      <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-end"
+          data-aos="fade-up-left" data-aos-duration="2000">
+          <p class="proj_title" style="margin-right:20px">Database</p>
+          <p class="proj_roleDesc" style="margin-right:20px; text-align:end">{{aProj.database_info}}</p>
 
-            <!-- Left and right controls/icons -->
-          <button class="carousel-control-prev" type="button" data-bs-target="#proj_demo_intern_2" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" style="background-color: #5e5e5e83; border-radius:30px;"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#proj_demo_intern_2" data-bs-slide="next">
-            <span class="carousel-control-next-icon" style="background-color: #5e5e5e83; border-radius:30px;"></span>
-          </button>
+          <!-- Carousel -->
+          <div id="proj_demo_intern_3" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              {{#each aProj.database_images}}
+              <button type="button" data-bs-target="#proj_demo_intern_3" data-bs-slide-to="{{@index}}"
+                class="{{#if @first}} active {{/if}}" style="background-color: #5e5e5e;"></button>
+              {{/each}}
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              {{#each aProj.database_images}}
+              <div class="carousel-item {{#if @first}} active {{/if}}">
+                <a class="" href="{{this}}" target="_blank">
+                  <img class="proj_image" src="{{this}}" alt="" class="d-block w-100">
+                </a>
+                <div class="carousel-caption">
+                  <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">{{@key}}</p>
+                </div>
+              </div>
+              {{/each}}
+
+              <!-- Left and right controls/icons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#proj_demo_intern_3"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"
+                  style="background-color: #5e5e5e83; border-radius:30px;"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#proj_demo_intern_3"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"
+                  style="background-color: #5e5e5e83; border-radius:30px;"></span>
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
-    </div>
-    <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
-      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-end" data-aos="fade-up-left" data-aos-duration="2000">
-        <p class="proj_title" style="margin-right:20px">Use Case</p>
-        <p class="proj_roleDesc" style="margin-right:20px; text-align:end">
-          {{aProj.use_case}}
-      </div>
-      
+      {{/if}}
+
     </div>
   </div>
-</div>
-{{!--
-involvement
-timeline
-spec_features
-front_end
-back_end --}}
+
+
+  <script>
+    // Suppose you fetched your doc from Firestore and got the HTML string:
+    const storedHtml = '{{{aProj_techniques}}}';
+    const contentDiv = document.getElementById('proj_roleDesc');
+    contentDiv.innerHTML = storedHtml;
+
+    //document.querySelector('.carousel-inner .carousel-item:first-child').classList.add('active');
+    //document.querySelector('.carousel-inner .indicator_btn:first-child').classList.add('active');
+
+
+  </script>
+
+  {{!--
+  involvement
+  timeline
+  spec_features
+  front_end
+  back_end --}}
+
+  {{!--
+  <nobr><img class="proj_icon" src="/img/icons/google_api.png" alt=""> Google Vision API</nobr>
+  <nobr><img class="proj_icon" src="/img/icons/ocr_text.png" alt=""> OCR-Text</nobr>
+  <nobr><img class="proj_icon" src="/img/icons/resnet.png" alt=""> &nbsp;ResNet-18 & ResNet-50 Embedding</nobr>
+  <nobr><img class="proj_icon" src="/img/icons/tokenization.png" alt=""> Tokenization</nobr>
+  <nobr><img class="proj_icon" src="/img/icons/algorithm.png" alt=""> &nbsp;Levenshtein Distance Algorithm (Fuzzywuzzy)
+  </nobr>
+  <nobr><img class="proj_icon" src="/img/icons/faiss.png" alt=""> &nbsp;Facebook AI Similarity Search (FAISS)</nobr>
+  <nobr><img class="proj_icon" src="/img/icons/scoring.png" alt=""> &nbsp;Confidence Scoring</nobr>
+  --}}
