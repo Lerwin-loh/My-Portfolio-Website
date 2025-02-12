@@ -54,11 +54,10 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
+// ----------------  Back To Top Button  ----------------
 var toTop_button = document.getElementById("backToTopBtn");
 
 function scrollFunction() {
-    console.log(document.body.scrollTop, document.documentElement.scrollTop)
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
       toTop_button.style.display = "flex";
     } else {
@@ -69,6 +68,26 @@ function scrollFunction() {
 function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
+}
+
+// ----------------  myProjects Anchor Point  ----------------
+// Select all anchor links pointing to "#myprojects"
+let all_projects = document.querySelectorAll("a");
+let filtered_projects = Array.from(all_projects).filter(link => link.getAttribute("href") === "/#myprojects");
+
+for (let i = 0; i < filtered_projects.length; i++) {
+  filtered_projects[i].addEventListener("click", function (e) {
+    e.preventDefault();  // Prevent default anchor jump
+
+    // Check if the link is for the same page
+    const anchor = document.getElementById('myprojects');
+    if (anchor) {
+      scrollToAnchor(anchor);
+    } else {
+      // Different page: Navigate first, then scroll on load
+      window.location.href = "/#myprojects";
+    }
+  });
 }
 
 // ----------------  myTestimonials Anchor Point  ----------------

@@ -4,6 +4,18 @@ const exphbs = require('express-handlebars');
 const Handlebars = require('handlebars');
 const app = express();
 const bodyParser = require('body-parser');
+
+// -----------------------------------------------------  Google Firebase  -----------------------------------------------------
+const admin = require('firebase-admin'); 
+const serviceAccount = require('./serviceAccountKey.json');
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  // For database services like Firestore or RTDB, you can specify a database URL:
+  // databaseURL: 'https://<YOUR-PROJECT-ID>.firebaseio.com'
+});
+
+
 /*
   Load files in routes folder. The main.js determines which function will be called based on the HTTP request and URL.
  */
@@ -36,7 +48,16 @@ app.engine('handlebars', exphbs.engine({
 }));
 app.set('view engine', 'handlebars');
 
-
+Handlebars.registerHelper('ifIn', function(value, array, options) {
+    if (Array.isArray(array) && array.indexOf(value) !== -1) {
+      // Condition is met, so render the main block
+      return options.fn(this);
+    } else {
+      // Condition is NOT met, so render the "else" block
+      return options.inverse(this);
+    }
+  });
+  
 
 
 /*
