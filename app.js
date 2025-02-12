@@ -7,12 +7,18 @@ const bodyParser = require('body-parser');
 
 // -----------------------------------------------------  Google Firebase  -----------------------------------------------------
 const admin = require('firebase-admin'); 
-const serviceAccount = require('./serviceAccountKey.json');
+// Read the service account JSON (as a string) from an environment variable
+const serviceAccountJSON = process.env.FIREBASE_SERVICE_ACCOUNT_JSON;
+if (!serviceAccountJSON) {
+  throw new Error('Missing FIREBASE_SERVICE_ACCOUNT_JSON environment variable');
+}
+
+// Convert the JSON string to an object
+const serviceAccount = JSON.parse(serviceAccountJSON);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  // For database services like Firestore or RTDB, you can specify a database URL:
-  // databaseURL: 'https://<YOUR-PROJECT-ID>.firebaseio.com'
+  // databaseURL: 'https://<YOUR-PROJECT-ID>.firebaseio.com'  // If needed
 });
 
 
