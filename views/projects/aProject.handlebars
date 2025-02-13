@@ -31,17 +31,26 @@
             {{#ifIn "BLOCKCHAIN" aProj.skills}}
             <img class="proj_icon skill_icon" src="/img/icons/blockchain.png" alt="">
             {{/ifIn}}
-            {{#ifIn "CSHARP" aProj.skills}}
+            {{#ifIn "UIPATH" aProj.skills}}
             <img class="proj_icon skill_icon" src="/img/icons/uipath.png" alt="">
             {{/ifIn}}
             {{#ifIn "NODEJS" aProj.skills}}
             <img class="proj_icon skill_icon" src="/img/icons/nodejs.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "HANDLEBARS" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/handlebars.png" alt="">
             {{/ifIn}}
             {{#ifIn "FLASK" aProj.skills}}
             <img class="proj_icon skill_icon" src="/img/icons/flask.png" alt="">
             {{/ifIn}}
             {{#ifIn "CSHARP" aProj.skills}}
             <img class="proj_icon skill_icon" src="/img/icons/csharp.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "EXCEL" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/excel.png" alt="">
+            {{/ifIn}}
+            {{#ifIn "TABLEAU" aProj.skills}}
+            <img class="proj_icon skill_icon" src="/img/icons/tableau.png" alt="">
             {{/ifIn}}
           </p>
         </div>
@@ -50,6 +59,7 @@
     </div>
   </div>
   <div class="container main_proj" style="padding-bottom: 10svh;">
+    {{!-- --------------------- Role Desc Segment --------------------- --}}
     <div class="row " style="padding: 220px 0px 0px 0px;">
       <!-- item -->
       <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center align-items-center"
@@ -91,10 +101,19 @@
         data-aos="fade-up" data-aos-duration="2000">
         <p class="proj_title">{{aProj_dateFrom}} - {{aProj_dateTo}}</p>
         <p class="proj_roleDesc">{{aProj.role_desc}}</p>
+        {{#if aProj_techniques}}
         <p class="proj_title">Techniques Used: </p>
-        <p class="proj_roleDesc" id="proj_roleDesc">
+        <p class="proj_roleDesc" id="proj_techniques">
         </p>
+        {{/if}}
+        {{#if aProj_features}}
+        <p class="proj_title">Features Used: </p>
+        <p class="proj_roleDesc" id="proj_features">
+        </p>
+        {{/if}}
       </div>
+
+      {{!-- --------------------- Project Involvement & Scheduling Segment --------------------- --}}
       <div class="row " style="padding: 170px 0px 0px 0px; overflow:clip;">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-start"
           data-aos="fade-up-right" data-aos-duration="2000">
@@ -139,6 +158,8 @@
         </div>
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
       </div>
+
+      {{!-- --------------------- Use-Case Segment --------------------- --}}
       {{#if aProj.use_case}}
       <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
@@ -149,6 +170,8 @@
         </div>
       </div>
       {{/if}}
+
+      {{!-- --------------------- Front End Segment --------------------- --}}
       {{#if aProj.front_end}}
       <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
@@ -165,6 +188,7 @@
         </div>
       </div>
       {{/if}}
+      {{!-- --------------------- Back End Segment --------------------- --}}
       {{#if aProj.back_end}}
       <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-start"
@@ -181,6 +205,8 @@
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
       </div>
       {{/if}}
+
+      {{!-- --------------------- Database Segment --------------------- --}}
       {{#if aProj.database_info}}
       <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
         <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
@@ -228,18 +254,73 @@
       </div>
       {{/if}}
 
+      {{!-- --------------------- Dashboard Segment --------------------- --}}
+      {{#if aProj.dashboard_info}}
+      <div class="row " style="padding: -120px 0px 0px 0px; overflow:clip;">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12"></div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 d-flex justify-content-center flex-column align-items-end"
+          data-aos="fade-up-left" data-aos-duration="2000">
+          <p class="proj_title" style="margin-right:20px">Dashboards</p>
+          <p class="proj_roleDesc" style="margin-right:20px; text-align:end">{{aProj.dashboard_info}}</p>
+
+          <!-- Carousel -->
+          <div id="proj_demo_intern_4" class="carousel slide" data-bs-ride="carousel">
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              {{#each aProj.dashboard_images}}
+              <button type="button" data-bs-target="#proj_demo_intern_4" data-bs-slide-to="{{@index}}"
+                class="{{#if @first}} active {{/if}}" style="background-color: #5e5e5e;"></button>
+              {{/each}}
+            </div>
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              {{#each aProj.dashboard_images}}
+              <div class="carousel-item {{#if @first}} active {{/if}}">
+                <a class="" href="{{this}}" target="_blank">
+                  <img class="proj_image" src="{{this}}" alt="" class="d-block w-100">
+                </a>
+                <div class="carousel-caption">
+                  <p style="color: #5e5e5e; text-shadow: 0px 5px 5px #d1d1d1;">{{@key}}</p>
+                </div>
+              </div>
+              {{/each}}
+
+              <!-- Left and right controls/icons -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#proj_demo_intern_4"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"
+                  style="background-color: #5e5e5e83; border-radius:30px;"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#proj_demo_intern_4"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon"
+                  style="background-color: #5e5e5e83; border-radius:30px;"></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/if}}
+
     </div>
   </div>
 
 
   <script>
-    // Suppose you fetched your doc from Firestore and got the HTML string:
-    const storedHtml = '{{{aProj_techniques}}}';
-    const contentDiv = document.getElementById('proj_roleDesc');
-    contentDiv.innerHTML = storedHtml;
+    // fetched doc from Firestore and got the HTML string to populate into HTML  Content
+    {{#if aProj_techniques }}
+    const storedHtml1 = '{{{aProj_techniques}}}';
+    const contentDiv1 = document.getElementById('proj_techniques');
+    contentDiv1.innerHTML = storedHtml1;
+    {{/if }}
+    {{#if aProj_features }}
+    const storedHtml2 = '{{{aProj_features}}}';
+    const contentDiv2 = document.getElementById('proj_features');
+    contentDiv2.innerHTML = storedHtml2;
+    {{/if }}
 
-    //document.querySelector('.carousel-inner .carousel-item:first-child').classList.add('active');
-    //document.querySelector('.carousel-inner .indicator_btn:first-child').classList.add('active');
+
+
 
 
   </script>
@@ -261,3 +342,11 @@
   <nobr><img class="proj_icon" src="/img/icons/faiss.png" alt=""> &nbsp;Facebook AI Similarity Search (FAISS)</nobr>
   <nobr><img class="proj_icon" src="/img/icons/scoring.png" alt=""> &nbsp;Confidence Scoring</nobr>
   --}}
+
+
+
+Affordability, (Zhi Qi)
+Demand and Supply of housing, (Joo keat)
+BTO Housing, (lerwin)
+Resources available, (asritha)
+Housing Grant Schemes (Yule)

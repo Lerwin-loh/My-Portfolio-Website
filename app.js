@@ -19,7 +19,7 @@ const serviceAccount = JSON.parse(serviceAccountJSON);
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  // databaseURL: 'https://<YOUR-PROJECT-ID>.firebaseio.com'  // If needed
+  // storageBucket: 'gs://my-portfolio-dde4a.firebasestorage.app'
 });
 
 
