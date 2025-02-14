@@ -152,6 +152,10 @@
     .proj_techncalDesc {
         padding: 0 4% 0 4%;
     }
+    
+    .proj_title_body .proj_type{
+        font-size: 30px;
+    }
 }
 
 
@@ -174,6 +178,9 @@
         opacity: 0;
         font-size: 0px;
         cursor: default;
+    }
+    .proj_title_body .proj_type{
+        font-size: 22px;
     }
 
 }

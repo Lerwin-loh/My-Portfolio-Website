@@ -1,34 +1,19 @@
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arvo'>
 <style>
-
-
-    .four_zero_four_bg {
-        background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
-        height: 400px;
-        background-position: center;
-    }
-
-    .link_404 {
-        margin: 20px 0 30px 0;
-    }
-
-    .contant_box_404 {
-        text-align: center;
-        margin-top: -50px;
-    }
 </style>
-<div class="container justify-content-center">
-    <div class="row">
-        <div class="col-sm-12">
-            <div class="four_zero_four_bg">
-            </div>
-
-            <div class="contant_box_404">
-                <h3 class="h2">It looks like you're lost!</h3>
-
-                <p>The page you are looking for is not available, please head back to home page.</p>
-                <a href="/" class="link_404 btn btn-danger btn-rounded">Go to Home</a>
-            </div>
+<div class="container" style="padding:0%;">
+    <canvas id="particle_canvas"></canvas>
+        <div class="row " style="margin: 10% 0px 200px 0px;">
+      <div class="col-12 d-flex justify-content-center">
+        <div class="index_title" id="index_title" style="text-align: center;">
+          <a class="index_title_link" href="/">
+            <p class="index_title_body">It looks like you're lost, head back!</p>
+            <img src="/img/down_arrow.png" style="width: 30px; opacity:0.8; z-index:1; position:relative">
+          </a>
         </div>
+
+        <img class="cloud" src="/img/cloud_1.png" alt="">
+        <img class="cloud_2" src="/img/cloud_2.png" alt="">
+      </div>
     </div>
 </div>

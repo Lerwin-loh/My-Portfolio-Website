@@ -226,7 +226,6 @@
     const container = document.querySelector('.gallery3');
     let gallery_item = document.querySelector(".gallery3 .gallery-item2");
     let gallery_item_width = window.getComputedStyle(gallery_item).width;
-    console.log(gallery_item_width)
     const scrollAmount = parseInt(gallery_item_width.split("px")[0]) + 30; // Adjust scroll step
 
     container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
@@ -245,7 +244,6 @@
     const container = document.querySelector('.gallery5');
     let gallery_item = document.querySelector(".gallery5 .gallery-item");
     let gallery_item_width = window.getComputedStyle(gallery_item).width;
-    console.log(gallery_item_width)
     const scrollAmount = parseInt(gallery_item_width.split("px")[0]) + 30; // Adjust scroll step
 
     container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });

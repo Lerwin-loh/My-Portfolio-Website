@@ -9,7 +9,6 @@ app.use(express.urlencoded({
 // Now you can access various Firebase services:
 const admin = require('firebase-admin');
 const db = admin.firestore();
-const auth = admin.auth();
 // Get a reference to your Cloud Storage bucket
 // const bucket = admin.storage().bucket();
 
@@ -36,7 +35,6 @@ router.get('/certificates', (req, res) => {
 
 
 router.get('/aProject/:project_id', async (req, res) => {
-    console.log(":HGEEOO")
     const monthNames = [
         "Jan", "Feb", "Mar", "Apr", "May", "Jun",
         "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
@@ -51,7 +49,6 @@ router.get('/aProject/:project_id', async (req, res) => {
         const docRef = db.collection('projects').doc(project_id);
         const docSnapshot = await docRef.get();
         if (docSnapshot.exists) {
-            console.log('Document data:', docSnapshot.data());
             aProj = docSnapshot.data();
 
             aProj_dateFrom = docSnapshot.data().date_from.toDate();
@@ -71,7 +68,7 @@ router.get('/aProject/:project_id', async (req, res) => {
                 aProj_features += aFeature
             });
 
-            console.log(aProj_dateTo, aProj_dateFrom, aProj_techniques)
+            // console.log(aProj_dateTo, aProj_dateFrom)
         } else {
             console.log('No such document!');
         }
@@ -87,7 +84,7 @@ router.get('/aProject/:project_id', async (req, res) => {
 // router.get('/addProject', (req, res) => {
 //     db.collection('projects').doc("project_6")
 //         .set({
-//             type: 'BUSINESS ANALYTICS PROJECT',
+//             type: 'Business Analytics Project',
 //             company: "NYP",
 //             company_desc: `This project is about applying visualisation concepts and techniques to create informative graphical representations using Tableau to support the hypothesis on, "Is the ease of buying a house in Singapore decreasing?".`,
 //             title_images: {
@@ -166,7 +163,7 @@ module.exports = router;
 
 
 // =========================================================== Project Data 5 ===========================================================
-// type: 'PYTHON APP DEVEVELOPMENT',
+// type: 'Python App Development',
 // company: "NYP",
 // company_desc: `This website is developed based on the python flask framework and it aims to enable consumers to make transactions seamlessly at their own comfort.`,
 // title_images: {
@@ -196,7 +193,7 @@ module.exports = router;
 
 
 // =========================================================== Project Data 4 ===========================================================
-// type: 'C# APP DEVEVELOPMENT',
+// type: 'C# App Development',
 // company: "NYP",
 // company_desc: `Using C# and ASP.NET, this project is developed with dynamic and database-driven web applications such as SQL. Security and Mimicking "Automation" are also two major components that are implemented into the E-business Website.`,
 // title_images: {
