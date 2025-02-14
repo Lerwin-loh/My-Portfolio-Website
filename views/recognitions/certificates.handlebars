@@ -136,35 +136,73 @@
 
           <!-- Scrollable Image Gallery -->
           <div class="scrolling-wrapper gallery4">
+            <a class="gallery-item-link" href="/img/recognitions/certificates/poly/poly_2023_skills.jpg"
+              target="_blank">
+              <img class="gallery-item" src="/img/recognitions/certificates/poly/poly_2023_skills.jpg"
+                alt="Image 1">
+            </a>
+            <a class="gallery-item-link" href="/img/recognitions/certificates/poly/poly_2023_academic.jpg"
+              target="_blank">
+              <img class="gallery-item" src="/img/recognitions/certificates/poly/poly_2023_academic.jpg"
+                alt="Image 2">
+            </a>
             <a class="gallery-item-link" href="/img/recognitions/certificates/secondary/mayflower_2020_merit.jpeg"
               target="_blank">
               <img class="gallery-item" src="/img/recognitions/certificates/secondary/mayflower_2020_merit.jpeg"
-                alt="Image 1">
+                alt="Image 3">
             </a>
             <a class="gallery-item-link" href="/img/recognitions/certificates/secondary/mayflower_2018_scholar.jpeg"
               target="_blank">
               <img class="gallery-item" src="/img/recognitions/certificates/secondary/mayflower_2018_scholar.jpeg"
-                alt="Image 2">
+                alt="Image 4">
             </a>
             <a class="gallery-item-link" href="/img/recognitions/certificates/secondary/mayflower_2017_scholar.jpeg"
               target="_blank">
               <img class="gallery-item" src="/img/recognitions/certificates/secondary/mayflower_2017_scholar.jpeg"
-                alt="Image 3">
+                alt="Image 5">
             </a>
             <a class="gallery-item-link" href="/img/recognitions/certificates/secondary/mayflower_2016_merit.jpeg"
               target="_blank">
               <img class="gallery-item" src="/img/recognitions/certificates/secondary/mayflower_2016_merit.jpeg"
-                alt="Image 4">
+                alt="Image 6">
             </a>
             <a class="gallery-item-link" href="/img/recognitions/certificates/secondary/mayflower_2016_academic.jpeg"
               target="_blank">
               <img class="gallery-item" src="/img/recognitions/certificates/secondary/mayflower_2016_academic.jpeg"
-                alt="Image 5">
+                alt="Image 7">
             </a>
           </div>
 
           <!-- Scroll Right Button -->
           <button class="scroll-gallery-btn right-gallery-btn" onclick="scrollGallery4(1)">&#10095;</button>
+        </div>
+      </div>
+
+      {{!-- SAF Awards --}}
+      <div class="col-12 fade_right" style="margin-top:50px;">
+        <p class="test_title_child d-flex justify-content-start" style="text-align: center;">SAF CERTIFICATES</p>
+        <hr class="hr_line2" style="width:100px; height:1px; border-bottom: 2px solid #ff0000; z-index:1; margin-left:6%;">
+      </div>
+      <div class="col-12">
+        <div class="gallery-container ">
+          <!-- Scroll Left Button -->
+          <button class="scroll-gallery-btn left-gallery-btn" onclick="scrollGallery5(-1)">&#10094;</button>
+
+          <!-- Scrollable Image Gallery -->
+          <div class="scrolling-wrapper gallery5">
+            <a class="gallery-item-link" href="/img/recognitions/certificates/saf/saf_3sg_2024.jpg"
+              target="_blank">
+              <img class="gallery-item" src="/img/recognitions/certificates/saf/saf_3sg_2024.jpg" alt="Image 1">
+            </a>
+            <a class="gallery-item-link" href="/img/recognitions/certificates/saf/saf_mp_2024.jpg"
+              target="_blank">
+              <img class="gallery-item" src="/img/recognitions/certificates/saf/saf_mp_2024.jpg" alt="Image 2">
+            </a>
+
+          </div>
+
+          <!-- Scroll Right Button -->
+          <button class="scroll-gallery-btn right-gallery-btn" onclick="scrollGallery5(1)">&#10095;</button>
         </div>
       </div>
 
@@ -176,10 +214,10 @@
       <div class="col-12">
         <div class="gallery-container ">
           <!-- Scroll Left Button -->
-          <button class="scroll-gallery-btn left-gallery-btn" onclick="scrollGallery5(-1)">&#10094;</button>
+          <button class="scroll-gallery-btn left-gallery-btn" onclick="scrollGallery6(-1)">&#10094;</button>
 
           <!-- Scrollable Image Gallery -->
-          <div class="scrolling-wrapper gallery5">
+          <div class="scrolling-wrapper gallery6">
             <a class="gallery-item-link" href="/img/recognitions/certificates/secondary/mayflower_2018_eagles.jpg"
               target="_blank">
               <img class="gallery-item" src="/img/recognitions/certificates/secondary/mayflower_2018_eagles.jpg"
@@ -194,7 +232,7 @@
           </div>
 
           <!-- Scroll Right Button -->
-          <button class="scroll-gallery-btn right-gallery-btn" onclick="scrollGallery5(1)">&#10095;</button>
+          <button class="scroll-gallery-btn right-gallery-btn" onclick="scrollGallery6(1)">&#10095;</button>
         </div>
       </div>
     </div>
@@ -243,6 +281,15 @@
   function scrollGallery5(direction) {
     const container = document.querySelector('.gallery5');
     let gallery_item = document.querySelector(".gallery5 .gallery-item");
+    let gallery_item_width = window.getComputedStyle(gallery_item).width;
+    const scrollAmount = parseInt(gallery_item_width.split("px")[0]) + 30; // Adjust scroll step
+
+    container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  }
+
+  function scrollGallery6(direction) {
+    const container = document.querySelector('.gallery6');
+    let gallery_item = document.querySelector(".gallery6 .gallery-item");
     let gallery_item_width = window.getComputedStyle(gallery_item).width;
     const scrollAmount = parseInt(gallery_item_width.split("px")[0]) + 30; // Adjust scroll step
 
