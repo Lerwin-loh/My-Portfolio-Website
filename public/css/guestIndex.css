@@ -486,7 +486,7 @@ body {
     justify-content: center;
 }
 
-.book_1:hover .cover_1 {
+.book_1:hover .cover_1, .book_1.active .cover_1 {
     -webkit-transition: all 1s;
     transition: all 1s;
     -webkit-transform:rotatey(-50deg) translateX(-40px);
@@ -498,7 +498,7 @@ body {
     transform-origin: 100%;
 }
 
-.book_1:hover .inner {
+.book_1:hover .inner, .book_1.active .inner {
     -webkit-transition: all 1s;
     transition: all 1s;
     -webkit-transform: rotateZ(15deg) rotateX(-10deg) rotateY(-10deg) translateX(90px);
@@ -508,7 +508,7 @@ body {
     box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
 }
 
-.book_1:hover {
+.book_1:hover, .book_1.active {
     transform:rotateZ(-10deg) translateX(-40px);
     -webkit-transition: all 1s;
     transition: all 1s;

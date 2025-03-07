@@ -52,7 +52,7 @@
     </div>
     <div class="col-xl-3 col-lg-4 col-md-6 myAchievements d-flex justify-content-center {{!-- fade_up_book--}}"
       data-aos="fade-up" data-aos-duration="1000">
-      <div class="book book_1">
+      <div class="book book_1" id="firstAchieveBook">
         <div class="inner">
           <p class="bookDesc" style="padding-left:5px;"><img style="height:55px; width:auto; margin-bottom:30px;"
               src="/img/ocbc_gold_medal.png" alt=""> <br> For Outstanding Academic Performance in NYP.
@@ -121,6 +121,26 @@
         </div>
       </div>
     </div>
+
+    {{!-- <div class="col-12">
+      <div class="gallery-container">
+        <!-- Scroll Left Button -->
+        <button class="scroll-gallery-btn left-gallery-btn" onclick="scrollGallery(-1)">&#10094;</button>
+
+        <!-- Scrollable Image Gallery -->
+        <div class="scrolling-wrapper">
+          <iframe class="gallery-item" style="margin:60px 20px 20px 20px;"
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7278100752638603264" frameborder="0"
+            allowfullscreen="" title="Embedded post 1"></iframe>
+          <iframe class="gallery-item" style="margin:60px 20px 20px 20px;"
+            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7156930569711276032" frameborder="0"
+            allowfullscreen="" title="Embedded post 2"></iframe>
+        </div>
+
+        <!-- Scroll Right Button -->
+        <button class="scroll-gallery-btn right-gallery-btn" onclick="scrollGallery(1)">&#10095;</button>
+      </div>
+    </div> --}}
 
   </div>
 </div>
@@ -396,10 +416,14 @@
     <div
       class="col-xl-4 col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center  flex-column  align-items-start aProd_text"
       data-aos="fade-up" data-aos-duration="2000">
-      <p class="aProject_description" style="top:10% !important;"><span>AUG 2024 - MAR 2025</span><br>Driven by curiosity and to stay adept in programming during my national service, 
-        I built this website using the Node.js framework, integrating a robust Full-Stack architecture. <br><br>The tech stack includes Google Firebase for structured data management, 
-        Express.js for seamless backend logic and routing, Node.js for efficient server-side execution, and Handlebars.js for dynamic, template-driven front-end rendering. 
-        This project embodies my passion for web development and serves as a testament for continuous learning and technological proficiency.</p>
+      <p class="aProject_description" style="top:10% !important;"><span>AUG 2024 - MAR 2025</span><br>Driven by
+        curiosity and to stay adept in programming during my national service,
+        I built this website using the Node.js framework, integrating a robust Full-Stack architecture. <br><br>The tech
+        stack includes Google Firebase for structured data management,
+        Express.js for seamless backend logic and routing, Node.js for efficient server-side execution, and
+        Handlebars.js for dynamic, template-driven front-end rendering.
+        This project embodies my passion for web development and serves as a testament for continuous learning and
+        technological proficiency.</p>
     </div>
 
   </div>
@@ -512,6 +536,13 @@
 
 {{!-- JS --}}
 <script>
+  //function scrollGallery(direction) {
+  //  const container = document.querySelector('.scrolling-wrapper');
+  //  let gallery_item = document.querySelector(".gallery-item");
+  //  let gallery_item_width = window.getComputedStyle(gallery_item).width;
+  //  const scrollAmount = parseInt(gallery_item_width.split("px")[0]) + 30; // Adjust scroll step
+  //  container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+  //}
 
   document.getElementById("testimonialsButton").addEventListener("click", function () {
     window.location.href = "/testimonials";

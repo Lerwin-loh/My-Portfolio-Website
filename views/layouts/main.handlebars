@@ -90,12 +90,28 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-{{!-- ---------------------- Pre-Loader ---------------------- --}}
+
 <script>
+	let book = document.getElementById("firstAchieveBook");
+
+	//!-- ---------------------- Pre-Loader ----------------------
 	window.addEventListener("load", function () {
 		document.getElementById("preloader").classList.add("ease-fade-out");
 		setTimeout(() => {
 			document.getElementById("preloader").style.display = "none";
 		}, 500); // Match the transition duration
+
+		book.classList.add("active"); // Apply the hover effect on page load
 	});
+
+	//-- ---------------------- First Achievement Book Active ----------------------
+	let allBooks = document.querySelectorAll(".book_1");
+	allBooks.forEach(aBook => {
+		aBook.addEventListener("mouseenter", function () {
+			book.classList.remove("active");
+		});
+	})
+
+
+
 </script>
