@@ -315,8 +315,8 @@ body {
     width: 160px;
     height: 230px;
     background-color: rgb(240, 238, 238);
-    -webkit-box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
-    box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
+    -webkit-box-shadow: -9px 10px 33px 0 rgba(135, 135, 135, 0.55);
+    box-shadow: -9px 10px 33px 0 rgba(135, 135, 135, 0.55);
     -webkit-transform: preserve-3d;
     -ms-transform: preserve-3d;
     transform: preserve-3d;
@@ -346,8 +346,8 @@ body {
     -webkit-transform-origin: 0;
     -ms-transform-origin: 0;
     transform-origin: 0;
-    -webkit-box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
-    box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
+    -webkit-box-shadow: none;
+    box-shadow: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -439,8 +439,8 @@ body {
     width: 180px;
     height: 250px;
     background-color: rgb(240, 238, 238);
-    -webkit-box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
-    box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
+    -webkit-box-shadow: -9px 10px 33px 0 rgba(135, 135, 135, 0.55);
+    box-shadow: -9px 10px 33px 0 rgba(135, 135, 135, 0.55);
     -webkit-transform: preserve-3d;
     -ms-transform: preserve-3d;
     transform: preserve-3d;
@@ -473,8 +473,8 @@ body {
     -webkit-transform-origin: 0;
     -ms-transform-origin: 0;
     transform-origin: 0;
-    -webkit-box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
-    box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
+    -webkit-box-shadow: none;
+    box-shadow: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -504,8 +504,8 @@ body {
     -webkit-transform: rotateZ(15deg) rotateX(-10deg) rotateY(-10deg) translateX(90px);
     -ms-transform: rotateZ(15deg) rotateX(-10deg) rotateY(-10deg) translateX(90px);
     transform: rotateZ(15deg) rotateX(-10deg) rotateY(-10deg) translateX(90px);
-    -webkit-box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
-    box-shadow: -9px 10px 33px 1px rgba(135, 135, 135, 0.59);
+    -webkit-box-shadow: -9px 10px 33px 0 rgba(135, 135, 135, 0.55);
+    box-shadow: -9px 10px 33px 0 rgba(135, 135, 135, 0.55);
 }
 
 .book_1:hover, .book_1.active {
