@@ -966,49 +966,60 @@ body {
     padding: 0;
 }
 
-.lava_puddle {
-    width: 38%;
-    height: auto;
+.lava-scene {
     position: relative;
-    left: 60px;
-    top: -100px;
-    padding: 0;
+    width: 100%;
+    margin-top: 0;
+    padding-top: clamp(48px, 4vw, 80px);
+}
 
+.lava-art {
+    position: relative;
+    width: clamp(269px, 28.8vw, 597px);
+    margin-left: auto;
+    margin-right: clamp(32px, 8vw, 160px);
+}
+
+.lava_puddle {
+    display: block;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    padding: 0;
+}
+
+.lava_ball1,
+.lava_ball2,
+.lava_ball3 {
+    position: absolute;
+    height: auto;
+    padding: 0;
 }
 
 .lava_ball1 {
-    width: 5%;
-    height: auto;
-    position: absolute;
-    left: 26%;
-
-    padding: 0;
+    width: 13%;
+    left: 62%;
+    bottom: 35%;
 }
 
 .lava_ball2 {
-    width: 3%;
-    height: auto;
-    position: absolute;
-    left: 17%;
-    padding: 0;
+    width: 8%;
+    left: 38%;
+    bottom: 42%;
 }
 
 .lava_ball3 {
-    width: 5%;
-    height: auto;
-    position: absolute;
-    left: 20%;
-    transform: translateY(50px);
-    padding: 0;
+    width: 13%;
+    left: 46%;
+    bottom: 24%;
 }
 
-.lava_ball4 {
-    width: 3%;
-    height: auto;
-    position: absolute;
-    left: 19%;
-    padding: 0;
-    top: 15%;
+@media screen and (max-width: 1420px) and (min-width: 992px) {
+    .lava-art {
+        margin-left: clamp(32px, 6vw, 96px);
+        margin-right: auto;
+    }
 }
 
 
@@ -1143,30 +1154,6 @@ body {
         height: 700px;
     }
 
-
-    .lava_puddle {
-        width: 38%;
-        left: 10%;
-        top: 20px;
-    }
-
-    .lava_ball1 {
-        width: 5%;
-        left: 30%;
-        bottom: 6%;
-    }
-
-    .lava_ball2 {
-        width: 3%;
-        left: 22%;
-        bottom: 8%;
-    }
-
-    .lava_ball3 {
-        width: 5%;
-        left: 24%;
-        bottom: 8%;
-    }
 
     .cloud_3 {
         top: 90%;
@@ -1384,20 +1371,8 @@ body {
         }
     }
 
-    .lava_puddle {
-        opacity: 0;
-    }
-
-    .lava_ball1 {
-        opacity: 0;
-    }
-
-    .lava_ball2 {
-        opacity: 0;
-    }
-
-    .lava_ball3 {
-        opacity: 0;
+    .lava-scene {
+        display: none;
     }
 
     .myRecog_topfade {
