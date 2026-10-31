@@ -1,6 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const app = express();
+const siteData = require('../data/siteData');
+
+const monthNames = [
+    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+];
 
 app.use(express.urlencoded({
     extended: true
@@ -16,29 +22,30 @@ const db = admin.firestore();
 // ------------------------------------------------------------------------------------------------------------------ Page Routes ------------------------------------------------------------------------------------------------------------------
 router.get('/', (req, res) => {
     let title_body = ""
-    res.render('landing/guestIndex', { title_body })
+    res.render('landing/guestIndex', { title_body, page: siteData })
 
 });
 
 
 router.get('/testimonials', (req, res) => {
 
-    res.render('recognitions/testimonials')
+    res.render('recognitions/testimonials', { testimonials: siteData.testimonials })
 
 });
 
 router.get('/certificates', (req, res) => {
 
-    res.render('recognitions/certificates')
+    res.render('recognitions/certificates', {
+        certificateGalleries: siteData.certificateGalleries.map((gallery, index) => ({
+            ...gallery,
+            galleryClass: 'gallery' + (index + 1),
+            addTopMargin: index > 0
+        }))
+    })
 
 });
 
-
 router.get('/aProject/:project_id', async (req, res) => {
-    const monthNames = [
-        "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-    ];
     let project_id = req.params.project_id
     let aProj, aProj_dateFrom, aProj_dateTo, monthIndex, year;
     let aProj_techniques = ""
@@ -71,9 +78,11 @@ router.get('/aProject/:project_id', async (req, res) => {
             // console.log(aProj_dateTo, aProj_dateFrom)
         } else {
             console.log('No such document!');
+            return res.status(404).render('ErrorPage/allError');
         }
     } catch (error) {
         console.error('Error reading documents:', error);
+        return res.status(500).render('ErrorPage/allError');
     }
 
 
@@ -266,7 +275,7 @@ module.exports = router;
 // =========================================================== Project Data 2 ===========================================================
 // type: 'Final Year Project',
 // company: "NYP",
-// company_desc: 'In modern times, migration is not seldomly seen anymore. It can be triggered by factors such as Domestic or international conflicts, Employment & wages and Business opportunities. This causes people to lose their important credentials such as proof of address, credit score, financial statements and also access to financial services when they migrate. Hence, With the problem statement, “How can you help migrants create a personal digital identity that can be trusted and accepted globally?” given from PolyFinTech 100 API Hackathon 2022, my team and I came up with a cutting-edge application to aid Migrants, to migrate smoothly without having the need to lose their proof of identity via blockchain.',
+// company_desc: 'In modern times, migration is not seldomly seen anymore. It can be triggered by factors such as Domestic or international conflicts, Employment & wages and Business opportunities. This causes people to lose their important credentials such as proof of address, credit score, financial statements and also access to financial services when they migrate. Hence, with the problem statement, How can you help migrants create a personal digital identity that can be trusted and accepted globally? given from PolyFinTech 100 API Hackathon 2022, my team and I came up with a cutting-edge application to aid migrants via blockchain.',
 // title_images: {
 //     'DIGIPASS':"/img/projects/BIPJ/digipass_home_crop.png",
 //     'DIGIPASS Wallet':"/img/projects/BIPJ/digipass_wallet_main.png",

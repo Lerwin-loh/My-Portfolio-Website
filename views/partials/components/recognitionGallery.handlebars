@@ -1,0 +1,17 @@
+<div class="col-12 fade_right"{{#if addTopMargin}} style="margin-top:50px;"{{/if}}>
+  <p class="test_title_child d-flex justify-content-start" style="text-align: center;">{{title}}</p>
+  <hr class="hr_line2" style="width:100px; height:1px; border-bottom: 2px solid #ff0000; z-index:1; margin-left:6%;">
+</div>
+<div class="col-12">
+  <div class="gallery-container">
+    <button class="scroll-gallery-btn left-gallery-btn js-gallery-scroll" data-gallery="{{galleryClass}}" data-direction="-1">&#10094;</button>
+    <div class="scrolling-wrapper {{galleryClass}}">
+      {{#each items}}
+      <a class="gallery-item-link" href="{{src}}" target="_blank">
+        <img class="{{#if className}}{{className}}{{else}}gallery-item{{/if}}" src="{{src}}" alt="{{alt}}"{{#if style}} style="{{style}}"{{/if}}>
+      </a>
+      {{/each}}
+    </div>
+    <button class="scroll-gallery-btn right-gallery-btn js-gallery-scroll" data-gallery="{{galleryClass}}" data-direction="1">&#10095;</button>
+  </div>
+</div>

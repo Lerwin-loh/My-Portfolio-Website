@@ -1,0 +1,15 @@
+<div class="col-xl-3 col-lg-4 col-md-6 myAchievements d-flex justify-content-center" data-aos="fade-up" data-aos-duration="{{duration}}">
+  <div class="book book_1"{{#if id}} id="{{id}}"{{/if}}>
+    <div class="inner">
+      <p class="bookDesc" style="padding-left:5px;">
+        {{#if title}}<span class="bookTitle">{{title}}</span>{{/if}}
+        {{#if icon}}
+        <img style="{{iconStyle}}" src="{{icon}}" alt="">
+        <br>
+        {{/if}}
+        {{#if descriptionHtml}}{{{descriptionHtml}}}{{else}}{{description}}{{/if}}
+      </p>
+    </div>
+    <div class="cover_1 {{coverClass}}{{#if coverImage}} cover-image{{/if}}"{{#if coverImage}} style="background-image: url('{{coverImage}}');"{{/if}}{{#if coverAlt}} role="img" aria-label="{{coverAlt}}"{{/if}}></div>
+  </div>
+</div>

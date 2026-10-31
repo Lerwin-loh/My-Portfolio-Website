@@ -78,9 +78,6 @@
 
 {{!-- ---------------------- AOS Animation ---------------------- --}}
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-	AOS.init();
-</script>
 
 {{!-- ---------------------- Jquery ---------------------- --}}
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -88,30 +85,5 @@
 
 {{!-- ---------------------- Swert Alert 2 ---------------------- --}}
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
-
-<script>
-	let book = document.getElementById("firstAchieveBook");
-
-	//!-- ---------------------- Pre-Loader ----------------------
-	window.addEventListener("load", function () {
-		document.getElementById("preloader").classList.add("ease-fade-out");
-		setTimeout(() => {
-			document.getElementById("preloader").style.display = "none";
-		}, 500); // Match the transition duration
-
-		book.classList.add("active"); // Apply the hover effect on page load
-	});
-
-	//-- ---------------------- First Achievement Book Active ----------------------
-	let allBooks = document.querySelectorAll(".book_1");
-	allBooks.forEach(aBook => {
-		aBook.addEventListener("mouseenter", function () {
-			book.classList.remove("active");
-		});
-	})
-
-
-
-</script>
+<script src="/js/siteInteractions.js"></script>
+<script src="/js/galleryScroll.js"></script>

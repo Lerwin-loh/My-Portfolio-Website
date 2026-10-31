@@ -7,7 +7,7 @@
       <div class="col-12 d-flex justify-content-center">
         <div class="index_title" id="index_title" style="text-align: center;">
           <a class="index_title_link" href="/#myAboutMe">
-            <p class="index_title_body">Full Stack Developer | Data Analyst | 2025</p>
+            <p class="index_title_body">Full Stack Developer | Data Analyst | 2026</p>
             <img src="/img/down_arrow.png" style="width: 30px; opacity:0.8; z-index:1; position:relative">
           </a>
         </div>
@@ -51,101 +51,10 @@
       <img class="cloud_4 fade_up_bg" src="/img/cloud_2.png" alt="">
     </div>
     
-    <div class="col-xl-3 col-lg-4 col-md-6 myAchievements d-flex justify-content-center {{!-- fade_up_book--}}"
-      data-aos="fade-up" data-aos-duration="1000">
-      <div class="book book_1" id="firstAchieveBook">
-        <div class="inner">
-          <p class="bookDesc" style="padding-left:5px;"><img style="height:55px; width:auto; margin-bottom:30px;"
-              src="/img/ocbc_gold_medal.png" alt=""> <br> For Outstanding Academic Performance in NYP.
-        </div>
-        <div class="cover_1 cover-img1">
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 myAchievements d-flex justify-content-center {{!-- fade_up_book--}}"
-      data-aos="fade-up" data-aos-duration="1500">
-      <div class="book book_1">
-        <div class="inner">
-          <p class="bookDesc" style="padding-left:5px;"><img style="height:55px; width:auto; margin-bottom:30px;"
-              src="/img/icons/top1.png" alt=""> <br> Top 1,<br> Perfect 4.0 GPA, Diploma <br> in Business &amp;
-            Financial Technology.</p>
-        </div>
-        <div class="cover_1 cover-img2">
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xl-3 col-lg-4 col-md-6 myAchievements d-flex justify-content-center {{!-- fade_up_book--}}"
-      data-aos="fade-up" data-aos-duration="1000">
-      <div class="book book_1">
-        <div class="inner">
-          <p class="bookDesc" style="padding-left:5px;"><img style="height:auto; width:100px; margin-bottom:50px;"
-              src="/img/scs.png" alt=""> <br>
-            For Outstanding <br> Final Year Project (FYP) <br> 2023.</p>
-        </div>
-        <div class="cover_1 cover-img3">
-        </div>
-      </div>
-    </div>
-
-    <div class="col-xl-3 col-lg-4 col-md-6 myAchievements d-flex justify-content-center {{!-- fade_up_book--}}"
-      data-aos="fade-up" data-aos-duration="1500">
-      <div class="book book_1">
-        <div class="inner">
-          <p class="bookDesc" style="padding-left:5px;"><img style="height:55px; width:auto; margin-bottom:30px;"
-              src="/img/icons/10_percent.png" alt=""> <br> For all 6 consecutive semesters &amp; attaining <br> 28
-            distinctions out of <br> 32 modules.</p>
-        </div>
-        <div class="cover_1 cover-img4">
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 myAchievements d-flex justify-content-center {{!-- fade_up_book--}}"
-      data-aos="fade-up" data-aos-duration="1000">
-      <div class="book book_1">
-        <div class="inner">
-          <p class="bookDesc" style="padding-left:5px;"><img style="height:55px; width:auto; margin-bottom:30px;"
-              src="/img/icons/fintech.png" alt=""> <br> Participated &amp; represented NYP in pitching
-            ideas and developing FinTech prototypes to address real world problems</p>
-        </div>
-        <div class="cover_1 cover-img5">
-        </div>
-      </div>
-    </div>
-    <div class="col-xl-3 col-lg-4 col-md-6 myAchievements d-flex justify-content-center {{!-- fade_up_book--}}"
-      data-aos="fade-up" data-aos-duration="1200">
-      <div class="book book_1">
-        <div class="inner">
-          <p class="bookDesc" style="padding-left:5px;"><img style="height:55px; width:auto; margin-bottom:30px;"
-              src="/img/icons/Dplus.png" alt=""> <br> Took 3 diploma plus programmes, collectively earning 2 A's and 1
-            Distinction.</p>
-        </div>
-        <div class="cover_1 cover-img6">
-        </div>
-      </div>
-    </div>
-
-    {{!-- <div class="col-12">
-      <div class="gallery-container">
-        <!-- Scroll Left Button -->
-        <button class="scroll-gallery-btn left-gallery-btn" onclick="scrollGallery(-1)">&#10094;</button>
-
-        <!-- Scrollable Image Gallery -->
-        <div class="scrolling-wrapper">
-          <iframe class="gallery-item" style="margin:60px 20px 20px 20px;"
-            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7278100752638603264" frameborder="0"
-            allowfullscreen="" title="Embedded post 1"></iframe>
-          <iframe class="gallery-item" style="margin:60px 20px 20px 20px;"
-            src="https://www.linkedin.com/embed/feed/update/urn:li:share:7156930569711276032" frameborder="0"
-            allowfullscreen="" title="Embedded post 2"></iframe>
-        </div>
-
-        <!-- Scroll Right Button -->
-        <button class="scroll-gallery-btn right-gallery-btn" onclick="scrollGallery(1)">&#10095;</button>
-      </div>
-    </div> --}}
-
-  </div>
+        {{#each page.achievements}}
+      {{> components/achievementBook}}
+    {{/each}}
+</div>
 </div>
 
 {{!-- Section 4 My Recognitions --}}
@@ -168,22 +77,19 @@
         data-aos-duration="1800">TESTIMONIALS</p>
       <div class="row justify-content-center fade_up_aboutMe" style="margin: 0" data-aos="fade-up"
         data-aos-duration="1500">
+        {{#each page.recognitionPreview.testimonials}}
         <div class="col-lg-4 col-sm-4 d-flex justify-content-center" style="padding: 0;">
-          <a class="aTestimonial" href="/img/recognitions/testimonials/mayflower_sec_p1.jpg" target="_blank">
-            <img class="img-fluid recog_img" src="/img/recognitions/testimonials/mayflower_sec_p1.jpg" alt="">
+          <a class="aTestimonial" href="{{this}}" target="_blank">
+            <img class="img-fluid recog_img" src="{{this}}" alt="">
           </a>
         </div>
-        <div class="col-lg-4 col-sm-4 d-flex justify-content-center" style="padding: 0;">
-          <a class="aTestimonial" href="/img/recognitions/testimonials/Poly_testimonial.jpeg" target="_blank">
-            <img class="img-fluid recog_img" src="/img/recognitions/testimonials/Poly_testimonial.jpeg" alt="">
-          </a>
-        </div>
+        {{/each}}
         <div class="col-lg-1 col-sm-1 d-flex justify-content-center" style="padding: 0;">
           <a class="dots" href="/testimonials" style="text-decoration: none;"><img class="dots"
               src="/img/3dots1.png"></a>
         </div>
       </div>
-      <button id="testimonialsButton" class="animated-button animated-button-left " data-aos="fade-left"
+      <button class="animated-button animated-button-left js-link-button" data-href="/testimonials" data-aos="fade-left"
         data-aos-duration="1800"> <!-- fade_left -->
         <img class="arr-1a" src="/img/left_arrow.png">
         <span class="text left">TESTIMONIALS</span>
@@ -198,23 +104,20 @@
         CERTIFICATES</p>
       <div class="row d-flex justify-content-center fade_up_aboutMe" style="margin: 0" data-aos="fade-up"
         data-aos-duration="1500">
+        {{#each page.recognitionPreview.certificates}}
         <div class="col-lg-4 col-sm-4 d-flex justify-content-center" style="padding: 0;">
-          <a class="aTestimonial" href="/img/recognitions/certificates/poly/poly_2023_academic.jpg" target="_blank">
-            <img class="img-fluid recog_img" src="/img/recognitions/certificates/poly/poly_2023_academic.jpg" alt="">
+          <a class="aTestimonial" href="{{this}}" target="_blank">
+            <img class="img-fluid recog_img" src="{{this}}" alt="">
           </a>
         </div>
-        <div class="col-lg-4 col-sm-4 d-flex justify-content-center" style="padding: 0;">
-          <a class="aTestimonial" href="/img/recognitions/certificates/poly/dList y3s2.jpg" target="_blank">
-            <img class="img-fluid recog_img" src="/img/recognitions/certificates/poly/dList y3s2.jpg" alt="">
-          </a>
-        </div>
+        {{/each}}
         <div class="col-lg-1 col-sm-1 d-flex justify-content-center" style="padding: 0;">
           <a class="dots" href="/certificates" style="text-decoration: none;"><img class="dots"
               src="/img/3dots1.png"></a>
         </div>
 
       </div>
-      <button id="certificatesButton" class="animated-button animated-button-right " data-aos="fade-right"
+      <button class="animated-button animated-button-right js-link-button" data-href="/certificates" data-aos="fade-right"
         data-aos-duration="1800"> <!-- fade_right -->
         <img class="arr-2b" src="/img/right_arrow.png">
         <span class="text right">CERTIFICATES</span>
@@ -244,160 +147,12 @@
       <p class="achieve_head_title project_title" id="myProjects" data-aos="fade-up" data-aos-duration="1800">PRO/JECTS
       </p>
     </div>
-
-    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 d-flex justify-content-center" data-aos="fade-up"
-      data-aos-duration="1000">
-      <img class="aProject_image" src="/img/projects/proctor/proctor_lerwin.jpg" alt=""
-        style="filter: brightness(95%);">
-    </div>
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 d-flex justify-content-center aProject_title" id="project_1">
-      <p class="aCircle"></p>
-      <hr class="hr_line_project" data-aos="fade-down" data-aos-duration="2000"> INTERNSHIP
-    </div>
-    <div
-      class="col-xl-4 col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center  flex-column align-items-start aProd_text"
-      data-aos="fade-up" data-aos-duration="2000">
-      <p class="aProject_description"><span>SEPT 2022 - FEB 2023</span><br>An intern at P&G as an Associate Researcher,
-        aided with the creation of a text and object detection model.</p>
-      <button id="aProjectButton1" class="animated-button animated-button-project" data-aos="fade-right"
-        data-aos-duration="1500">
-        <img class="arr-2b" src="/img/right_arrow.png">
-        <span class="text right">VIEW PROJECT</span>
-        <span class="circle"></span>
-        <img class="arr-1b" src="/img/right_arrow.png">
-      </button>
-    </div>
-  </div>
-  <!-- item -->
-  <div class="row" style="margin-bottom:50px;">
-    <div
-      class="col-xl-6 col-sm-6 order-last order-sm-1 d-flex justify-content-center  flex-column align-items-end aProd_text"
-      data-aos="fade-up" data-aos-duration="2000">
-      <p class="aProject_description aProd_text_right"><span>APR 2022 - AUG 2022</span><br>Tackling a Real-World Problem
-        statement from PolyFinTech 100 API Hackathon 2022, my team and I came up with a cutting-edge solution for our
-        final year project, which
-        dives into blockchain implementations and AI Automation features.</p>
-      <button id="aProjectButton2" class="animated-button animated-button-project" data-aos="fade-right"
-        data-aos-duration="1500">
-        <img class="arr-2b" src="/img/right_arrow.png">
-        <span class="text right">VIEW PROJECT</span>
-        <span class="circle"></span>
-        <img class="arr-1b" src="/img/right_arrow.png">
-      </button>
-    </div>
-    <div class="col-xl-1 col-sm-1 order-2 d-flex justify-content-center aProject_title align-items-end" id="project_2">
-      <p class="aCircle_right"></p>
-      <hr class="hr_line_project_right" data-aos="fade-down" data-aos-duration="3000"> FY PROJECT
-    </div>
-    <div class=" col-xl-5 col-sm-5 order-first order-sm-3 d-flex justify-content-center" data-aos="fade-up"
-      data-aos-duration="1000">
-      <img class="aProject_image" src="/img/projects/BIPJ/digipass_home.png" alt="" style="">
-    </div>
   </div>
 
-  <!-- item -->
-  <div class="row" style="margin-bottom:50px;">
-    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 d-flex justify-content-center" data-aos="fade-up"
-      data-aos-duration="1000">
-      <img class="aProject_image" src="/img/projects/FSD/shoecraft_home_crop.png" alt=""
-        style="filter: brightness(95%);">
-    </div>
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 d-flex justify-content-center aProject_title " id="project_3">
-      <p class="aCircle"></p>
-      <hr class="hr_line_project" data-aos="fade-down" data-aos-duration="3000"> FULL STACK DEV
-    </div>
-    <div
-      class="col-xl-4 col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center  flex-column align-items-start aProd_text"
-      data-aos="fade-up" data-aos-duration="2000">
-      <p class="aProject_description"><span>APR 2022 - AUG 2022</span><br>A full-stack application project aimed to
-        create a responsive website, integrated with a virtual cloud database and e-commerce standard management
-        systems.</p>
-      <button id="aProjectButton3" class="animated-button animated-button-project" data-aos="fade-right"
-        data-aos-duration="1500">
-        <img class="arr-2b" src="/img/right_arrow.png">
-        <span class="text right">VIEW PROJECT</span>
-        <span class="circle"></span>
-        <img class="arr-1b" src="/img/right_arrow.png">
-      </button>
-    </div>
-  </div>
+    {{#each page.homepageProjects}}
+      {{> components/projectPreview}}
+    {{/each}}
 
-  <!-- item -->
-  <div class="row" style="margin-bottom:50px;">
-    <div
-      class="col-xl-6 col-sm-6 order-last order-sm-1 d-flex justify-content-center  flex-column align-items-end aProd_text"
-      data-aos="fade-up" data-aos-duration="2000">
-      <p class="aProject_description aProd_text_right"><span>NOV 2021 - FEB 2022</span><br>A dynamic, secured, SQL
-        database-driven and interactive e-business BOT service website, catered to automate difficult e-purchases. In
-        this instance, branded goods!</p>
-      <button id="aProjectButton4" class="animated-button animated-button-project" data-aos="fade-right"
-        data-aos-duration="1500">
-        <img class="arr-2b" src="/img/right_arrow.png">
-        <span class="text right">VIEW PROJECT</span>
-        <span class="circle"></span>
-        <img class="arr-1b" src="/img/right_arrow.png">
-      </button>
-    </div>
-    <div class="col-xl-1 col-sm-1 order-2 d-flex justify-content-center aProject_title align-items-end " id="project_4">
-      <p class="aCircle_right"></p>
-      <hr class="hr_line_project_right" data-aos="fade-down" data-aos-duration="3000"> C# APP DEV
-    </div>
-    <div class=" col-xl-5 col-sm-5 order-first order-sm-3 d-flex justify-content-center" data-aos="fade-up"
-      data-aos-duration="1000">
-      <img class="aProject_image" src="/img/projects/BADP/veloce_home_crop.png" alt="" style="">
-    </div>
-  </div>
-
-  <!-- item -->
-  <div class="row" style="margin-bottom:50px;">
-    <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 d-flex justify-content-center" data-aos="fade-up"
-      data-aos-duration="1000">
-      <img class="aProject_image" src="/img/projects/PADP/candy_home_crop.png" alt="" style="filter: brightness(95%);">
-    </div>
-    <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 d-flex justify-content-center aProject_title " id="project_5">
-      <p class="aCircle"></p>
-      <hr class="hr_line_project" data-aos="fade-down" data-aos-duration="3000"> PY APP DEV
-    </div>
-    <div
-      class="col-xl-4 col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center  flex-column align-items-start aProd_text"
-      data-aos="fade-up" data-aos-duration="2000">
-      <p class="aProject_description"><span>NOV 2020 - FEB 2021</span><br>This project is developed based on the
-        python-flask framework and it aims to empower traditional brick and motor businesses with e-commerce.</p>
-      <button id="aProjectButton5" class="animated-button animated-button-project" data-aos="fade-right"
-        data-aos-duration="1500">
-        <img class="arr-2b" src="/img/right_arrow.png">
-        <span class="text right">VIEW PROJECT</span>
-        <span class="circle"></span>
-        <img class="arr-1b" src="/img/right_arrow.png">
-      </button>
-    </div>
-  </div>
-
-  <!-- item -->
-  <div class="row" style="margin-bottom:50px;">
-    <div
-      class="col-xl-6 col-sm-6 order-last order-sm-1 d-flex justify-content-center  flex-column align-items-end aProd_text"
-      data-aos="fade-up" data-aos-duration="2000">
-      <p class="aProject_description aProd_text_right"><span>APR 2021 - AUG 2021</span><br>Applied visualization
-        concepts and business analytics &amp; intelligence techniques with the use of Tableau Software, to support the
-        hypothesis, "The ease of house ownership in Singapore is increasing".</p>
-      <button id="aProjectButton6" class="animated-button animated-button-project" data-aos="fade-right"
-        data-aos-duration="1500">
-        <img class="arr-2b" src="/img/right_arrow.png">
-        <span class="text right">VIEW PROJECT</span>
-        <span class="circle"></span>
-        <img class="arr-1b" src="/img/right_arrow.png">
-      </button>
-    </div>
-    <div class="col-xl-1 col-sm-1 order-2 d-flex justify-content-center aProject_title align-items-end " id="project_6">
-      <p class="aCircle_right"></p>
-      <hr class="hr_line_project_right" data-aos="fade-down" data-aos-duration="3000"> DATA ANALYTICS
-    </div>
-    <div class=" col-xl-5 col-sm-5 order-first order-sm-3 d-flex justify-content-center" data-aos="fade-up"
-      data-aos-duration="1000">
-      <img class="aProject_image" src="/img/projects/analytics/zhiqi_chart_crop.jpg" alt="" style="">
-    </div>
-  </div>
 
   <!--  Website Desc Sub-item -->
   <div class="row" style="margin-bottom:50px;">
@@ -445,37 +200,48 @@
 </div>
 
 <div style="background: linear-gradient(180deg, rgba(244, 216, 216) 30%, rgba(244, 216, 216) 90%); height:90px;">
-  <p class="achieve_head_title myTimeline" id="myTimeline" data-aos="fade-up" data-aos-duration="1800">&nbsp; Where It
-    All
-    Started..</p>
+  <p class="achieve_head_title myTimeline" id="myTimeline" data-aos="fade-up" data-aos-duration="1800">&nbsp; My
+    Journey
+    So Far</p>
 </div>
 <div class="lava_ash">
   <div class="container-fluid timeline ">
     <ul>
       <li> <!-- item -->
         <div>
-          <time>2014</time>
+          <time>2026</time>
           <div class="discovery">
-            <h4>Da Qiao Primary</h4>
+            <h4>Teaching Assistant — BT1101, NUS</h4>
             <p>
-              Graduated with 180/300 – hit a breaking point, still a bit clueless, and maybe had a little too much fun
-              <img class="" src="/img/icons/guilty.png" style="width: 22px; opacity: 1;" alt="!">
+              Guided students in introductory programming and data-driven problem solving through tutorials,
+              consultations, and assignment support.
             </p>
           </div>
         </div>
       </li>
       <li> <!-- item -->
         <div>
-          <time>2018</time>
+          <time>2025</time>
           <div class="discovery">
-            <h4>Mayflower Secondary</h4>
+            <h4>National Service</h4>
             <p>
-              Got into Normal Academic Stream (NA). Started to have clearer ambitions and goals that I wanted to
-              achieve.
+              Reached the age where I had to serve the nation and protect Singapore!
               <br>
-              Graduated with Net 6 pointer. Took National Police Cabet Corps (NPCC) as a Co-corricular Activity, and
-              peaked at Staff Sergeant Rank.
-              Attained Edusave Scholarship Award 2017 &amp; 2018 and Edusave Eagles Award 2018.
+              Did well in Basic Military Training (BMT) and got into Specialist Cadet School (SCS), achieving the rank
+              of a
+              3rd Sergeant in the Singapore Armed Forces (SAF). Currently leading a section size of 6-7 men.
+            </p>
+          </div>
+        </div>
+      </li>
+      <li> <!-- item -->
+        <div>
+          <time>2023</time>
+          <div class="discovery">
+            <h4>Part-Timed @ Create Lab Pte Ltd</h4>
+            <p>
+              At Create Lab, a top Singapore startup, I actively contributed by teaching, leading, and managing classes,
+              with the highlight being my role as lead instructor at a successful programming camp.
             </p>
           </div>
         </div>
@@ -504,27 +270,28 @@
       </li>
       <li> <!-- item -->
         <div>
-          <time>2023</time>
+          <time>2018</time>
           <div class="discovery">
-            <h4>Part-Timed @ Create Lab Pte Ltd</h4>
+            <h4>Mayflower Secondary</h4>
             <p>
-              At Create Lab, a top Singapore startup, I actively contributed by teaching, leading, and managing classes,
-              with the highlight being my role as lead instructor at a successful programming camp.
+              Got into Normal Academic Stream (NA). Started to have clearer ambitions and goals that I wanted to
+              achieve.
+              <br>
+              Graduated with Net 6 pointer. Took National Police Cadet Corps (NPCC) as a Co-curricular Activity, and
+              peaked at Staff Sergeant Rank.
+              Attained Edusave Scholarship Award 2017 &amp; 2018 and Edusave Eagles Award 2018.
             </p>
           </div>
         </div>
       </li>
       <li> <!-- item -->
         <div>
-          <time>2025</time>
+          <time>2014</time>
           <div class="discovery">
-            <h4>National Service</h4>
+            <h4>Da Qiao Primary</h4>
             <p>
-              Reached the age where I had to serve the nation and protect Singapore!
-              <br>
-              Did well in Basic Military Training (BMT) and got into Specialist Cadet School (SCS), achieving the rank
-              of a
-              3rd Sergeant in the Singapore Armed Forces (SAF). Currently leading a section size of 6-7 men.
+              Graduated with 180/300 - hit a breaking point, still a bit clueless, and maybe had a little too much fun
+              <img class="" src="/img/icons/guilty.png" style="width: 22px; opacity: 1;" alt="!">
             </p>
           </div>
         </div>
@@ -538,45 +305,3 @@
 </div>
 
 {{!-- JS --}}
-<script>
-  //function scrollGallery(direction) {
-  //  const container = document.querySelector('.scrolling-wrapper');
-  //  let gallery_item = document.querySelector(".gallery-item");
-  //  let gallery_item_width = window.getComputedStyle(gallery_item).width;
-  //  const scrollAmount = parseInt(gallery_item_width.split("px")[0]) + 30; // Adjust scroll step
-  //  container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-  //}
-
-  document.getElementById("testimonialsButton").addEventListener("click", function () {
-    window.location.href = "/testimonials";
-  });
-
-  document.getElementById("certificatesButton").addEventListener("click", function () {
-    window.location.href = "/certificates";
-  });
-
-  document.getElementById("aProjectButton1").addEventListener("click", function () {
-    window.location.href = "/aProject/project_1";
-  });
-
-  document.getElementById("aProjectButton2").addEventListener("click", function () {
-    window.location.href = "/aProject/project_2";
-  });
-
-  document.getElementById("aProjectButton3").addEventListener("click", function () {
-    window.location.href = "/aProject/project_3";
-  });
-
-  document.getElementById("aProjectButton4").addEventListener("click", function () {
-    window.location.href = "/aProject/project_4";
-  });
-
-  document.getElementById("aProjectButton5").addEventListener("click", function () {
-    window.location.href = "/aProject/project_5";
-  });
-
-  document.getElementById("aProjectButton6").addEventListener("click", function () {
-    window.location.href = "/aProject/project_6";
-  });
-
-</script>

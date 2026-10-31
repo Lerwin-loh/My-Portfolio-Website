@@ -1,0 +1,29 @@
+{{#if imageFirst}}
+<div class="row" style="margin-bottom:50px;">
+  <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+    <img class="aProject_image" src="{{image}}" alt=""{{#if imageStyle}} style="{{imageStyle}}"{{/if}}>
+  </div>
+  <div class="col-xl-1 col-lg-1 col-md-1 col-sm-1 d-flex justify-content-center aProject_title" id="{{id}}">
+    <p class="aCircle"></p>
+    <hr class="hr_line_project" data-aos="fade-down" data-aos-duration="3000"> {{label}}
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center flex-column align-items-start aProd_text" data-aos="fade-up" data-aos-duration="2000">
+    <p class="aProject_description"><span>{{date}}</span><br>{{description}}</p>
+    {{> components/animatedButton className="animated-button-project" href=href text="VIEW PROJECT" duration="1500"}}
+  </div>
+</div>
+{{else}}
+<div class="row" style="margin-bottom:50px;">
+  <div class="col-xl-6 col-sm-6 order-last order-sm-1 d-flex justify-content-center flex-column align-items-end aProd_text" data-aos="fade-up" data-aos-duration="2000">
+    <p class="aProject_description aProd_text_right"><span>{{date}}</span><br>{{description}}</p>
+    {{> components/animatedButton className="animated-button-project" href=href text="VIEW PROJECT" duration="1500"}}
+  </div>
+  <div class="col-xl-1 col-sm-1 order-2 d-flex justify-content-center aProject_title align-items-end" id="{{id}}">
+    <p class="aCircle_right"></p>
+    <hr class="hr_line_project_right" data-aos="fade-down" data-aos-duration="3000"> {{label}}
+  </div>
+  <div class="col-xl-5 col-sm-5 order-first order-sm-3 d-flex justify-content-center" data-aos="fade-up" data-aos-duration="1000">
+    <img class="aProject_image" src="{{image}}" alt=""{{#if imageStyle}} style="{{imageStyle}}"{{/if}}>
+  </div>
+</div>
+{{/if}}

@@ -85,7 +85,7 @@ app.use('/', mainRoute);
 
 //The ALL ERRORS Route, eg: 404 error (ALWAYS Keep this below the routing)
 app.get('*', function (req, res) {
-  res.render('ErrorPage/allError');
+  res.status(404).render('ErrorPage/allError');
 });
 
 

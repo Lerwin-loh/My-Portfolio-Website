@@ -1,4 +1,7 @@
 const canvas = document.getElementById('particle_canvas');
+if (!canvas) {
+    // This script is shared by the layout, but the canvas only exists on the homepage.
+} else {
 const ctx = canvas.getContext('2d');
 
 canvas.width = window.innerWidth * window.devicePixelRatio;
@@ -93,7 +96,7 @@ class Effect {
             // Increment t to continue the movement
             this.t += 0.05;
 
-            // Reset t for a full loop when it completes a cycle (2π)
+            // Reset t for a full loop when it completes a cycle (2Ï€)
             if (this.t > 2 * Math.PI) {
                 this.t = 0;
             }
@@ -120,7 +123,7 @@ class Effect {
                     // Increment t to continue the movement
                     this.t += 0.05;
 
-                    // Reset t for a full loop when it completes a cycle (2π)
+                    // Reset t for a full loop when it completes a cycle (2Ï€)
                     if (this.t > 2 * Math.PI) {
                         this.t = 0;
                     }
@@ -179,3 +182,5 @@ function animate() {
 }
 animate()
 
+
+}
